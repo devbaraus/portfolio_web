@@ -99,7 +99,7 @@ export default {
   axios: {
     baseURL:
       process.env.NODE_ENV === 'production'
-        ? 'universal'
+        ? 'https://cors-anywhere.herokuapp.com/https://portfolio-serverapi.herokuapp.com/'
         : 'http://localhost:3333/',
   },
   /*
