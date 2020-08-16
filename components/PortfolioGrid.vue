@@ -82,7 +82,7 @@ export default {
 <style lang="scss" scoped>
 .portfolio-grid {
   @apply grid mt-4 col-gap-4 row-gap-8;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 .portfolio {
   @apply bg-light text-white shadow-lg relative;

@@ -21,8 +21,8 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  // mode: 'universal',
-  mode: 'spa',
+  mode: 'universal',
+  // mode: 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -102,8 +102,8 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    // baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    baseURL: 'http://localhost:3333/',
+    baseURL: 'https://portfolio-serverapi.herokuapp.com/',
+    // baseURL: 'http://localhost:3333/',
   },
   /*
    ** Content module configuration

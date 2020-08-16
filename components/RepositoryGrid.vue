@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .repo-grid {
   @apply grid mt-4 col-gap-4 row-gap-8;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 .repo {
   @apply bg-light text-gray-light shadow-lg flex justify-between flex-col;

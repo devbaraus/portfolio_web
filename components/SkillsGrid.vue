@@ -67,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 .skill-set-grid {
   @apply grid mt-4 col-gap-4 row-gap-8;
-  grid-template-columns: repeat(auto-fill, minmax(min(16rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 .skill-set {
   @apply bg-light pb-4 text-gray-light shadow-lg;
