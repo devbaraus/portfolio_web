@@ -63,7 +63,7 @@
             ></textarea>
             </label>
           </div>
-          <div class="form-flex">
+          <div class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap">
             <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
@@ -104,9 +104,6 @@ export default {
     form {
       .form-grid {
         @apply grid grid-cols-2 col-gap-2 row-gap-2 mb-2;
-      }
-      .form-flex {
-        @apply flex items-center justify-between;
       }
 
       button {
