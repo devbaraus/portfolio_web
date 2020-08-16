@@ -1,0 +1,170 @@
+$primary-35: rgba(238, 86, 34, 0.35);
+$primary-80: rgba(238, 86, 34, 0.8);
+
+.markdown {
+  * {
+    @apply my-4;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold my-6;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+  h5,
+  h6 {
+    @apply text-base font-bold my-6;
+  }
+  a {
+    @apply relative;
+    background-size: 100% 200%;
+    background-position: 0 0;
+    transition: background-position 200ms ease-in, padding 200ms ease-in-out;
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 8px),
+      $primary-35 calc(50% - 8px),
+      $primary-35 100%
+    );
+  }
+  a:hover {
+    background-image: linear-gradient(
+      transparent,
+      transparent calc(50% - 8px),
+      $primary-80 calc(50% - 8px),
+      $primary-80
+    );
+    background-position: 0 100%;
+  }
+  p {
+    @apply text-base my-2 text-justify;
+  }
+  img {
+    @apply max-w-full mx-auto mb-4 inline;
+  }
+  ul {
+    @apply list-disc ml-6;
+  }
+  ol {
+    @apply list-decimal ml-6;
+  }
+  blockquote {
+    border-left: solid var(--color-primary);
+    @apply pl-4 text-justify w-full;
+  }
+  code {
+    @apply p-3 shadow bg-light text-white max-w-full block rounded overflow-x-auto;
+  }
+  p code {
+    @apply inline break-words p-0 px-1;
+  }
+  pre code.css,
+  pre code.html,
+  pre code.js,
+  pre code.javascript,
+  pre code.ts,
+  pre code.ts,
+  pre code.typescript,
+  pre code.md,
+  pre code.markdown,
+  pre code.php,
+  pre code.kotlin,
+  pre code.kt,
+  pre code.python,
+  pre code.py {
+    @apply relative pt-8;
+  }
+  pre code.css:after,
+  pre code.html:after,
+  pre code.js:after,
+  pre code.javascript:after,
+  pre code.ts:after,
+  pre code.typescript:after,
+  pre code.md:after,
+  pre code.markdown:after,
+  pre code.php:after,
+  pre code.kotlin:after,
+  pre code.kt:after,
+  pre code.python:after,
+  pre code.py:after,{
+    @apply p-1 absolute bg-primary-light overflow-hidden;
+    top: -1px;
+  }
+
+  pre code.css:after {
+    content: 'css';
+  }
+  pre code.js:after,
+  pre code.javascript:after {
+    content: 'javascript';
+  }
+  pre code.ts:after,
+  pre code.typescript:after {
+    content: 'typescript';
+  }
+  pre code.markdown:after,
+  pre code.md:after, {
+    content: 'markdown';
+  }
+  pre code.html:after {
+    content: 'html';
+  }
+  pre code.py:after,
+  pre code.python:after {
+    content: 'python';
+  }
+  pre code.php:after {
+    content: 'php';
+  }
+  pre code::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  pre code::-webkit-scrollbar-track {
+    @apply bg-white;
+  }
+  pre code::-webkit-scrollbar-thumb {
+    @apply bg-dark;
+    transition: background-color 0.3s;
+  }
+  pre code::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark;
+  }
+
+  table {
+    @apply bg-light text-gray-light table;
+    thead {
+      @apply font-bold align-baseline;
+    }
+    th,
+    td {
+      @apply px-3 px-3;
+    }
+    th + td,
+    td + td {
+      @apply border-l-1 border-solid border-gray-light;
+    }
+    tbody {
+      @apply align-middle table-row-group;
+      tr {
+        &:nth-child(2n) {
+          @apply bg-dark;
+        }
+        td {
+          @apply table-cell;
+        }
+      }
+    }
+  }
+}

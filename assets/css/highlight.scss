@@ -1,0 +1,191 @@
+//.hljs {
+//  display: block;
+//  overflow-x: auto;
+//  padding: 0.5em;
+//  background: #23241f;
+//}
+//
+//.hljs,
+//.hljs-tag,
+//.hljs-subst {
+//  color: #f8f8f2;
+//}
+//
+//.hljs-strong,
+//.hljs-emphasis {
+//  color: #a8a8a2;
+//}
+//
+//.hljs-bullet,
+//.hljs-quote,
+//.hljs-number,
+//.hljs-regexp,
+//.hljs-literal,
+//.hljs-link {
+//  color: #ae81ff;
+//}
+//
+//.hljs-code,
+//.hljs-title,
+//.hljs-section,
+//.hljs-selector-class {
+//  color: #a6e22e;
+//}
+//
+//.hljs-strong {
+//  font-weight: bold;
+//}
+//
+//.hljs-emphasis {
+//  font-style: italic;
+//}
+//
+//.hljs-keyword,
+//.hljs-selector-tag,
+//.hljs-name,
+//.hljs-attr {
+//  color: #f92672;
+//}
+//
+//.hljs-symbol,
+//.hljs-attribute {
+//  color: #66d9ef;
+//}
+//
+//.hljs-params,
+//.hljs-class .hljs-title {
+//  color: #f8f8f2;
+//}
+//
+//.hljs-string,
+//.hljs-type,
+//.hljs-built_in,
+//.hljs-builtin-name,
+//.hljs-selector-id,
+//.hljs-selector-attr,
+//.hljs-selector-pseudo,
+//.hljs-addition,
+//.hljs-variable,
+//.hljs-template-variable {
+//  color: #e6db74;
+//}
+//
+//.hljs-comment,
+//.hljs-deletion,
+//.hljs-meta {
+//  color: #75715e;
+//}
+
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  //padding: 1em;
+  //background: #2B2B2D;
+  color: #CDD3D8;
+  font-family: "Fira Mono", monospace;
+  font-size: 1em;
+}
+.hljs > *::selection {
+  background-color: #3e4451;
+}
+
+.hljs-comment {
+  color: #656565;
+  font-style: italic;
+}
+
+.hljs-selector-tag {
+  color: #C792EA;
+}
+
+.hljs-string,
+.hljs-subst {
+  color: #C3E88D;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-variable,
+.hljs-template-variable {
+  color: #F77669;
+}
+
+.hljs-keyword {
+  color: #C792EA;
+}
+.hljs-function > .hljs-title {
+  color: #75A5FF;
+}
+.hljs-tag {
+  color: #abb2bf;
+}
+.hljs-name {
+  color: #e06c75;
+}
+.hljs-type {
+  color: #da4939;
+}
+
+.hljs-attribute {
+  color: #80CBBF;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-link {
+  color: #C792EA;
+}
+
+.hljs-params {
+  color: #EEFFF7;
+}
+
+
+.hljs-meta {
+  color: #75A5FF;
+}
+
+.hljs-title {
+  color: #75A5FF;
+}
+
+.hljs-section {
+  color: #ffc66d;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-selector-class {
+  color: #FFCB68;
+}
+
+.hljs-selector-id {
+  color: #F77669;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}

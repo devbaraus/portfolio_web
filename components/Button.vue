@@ -5,21 +5,24 @@
     rel="noopener noreferrer"
     class="bg-dark px-4 py-2 rounded-lg text-white"
   >
-    <span v-if="!dev">
-      <i :class="`icon-${icon} text-base`" /> {{ text }}
-    </span>
-    <span v-else>
-      <i :class="`devicon-${icon}-plain text-xl`" /> {{ text }}
-    </span>
+    <Icon :dev="dev" :name="icon" class="text-base" />
+    <slot></slot>
+    <!--    <span v-if="!dev">-->
+    <!--      <i :class="`icon-${icon} text-base`" /> -->
+    <!--    </span>-->
+    <!--    <span v-else>-->
+    <!--      <i :class="`devicon-${icon}-plain text-xl`" /> {{ text }}-->
+    <!--    </span>-->
   </a>
 </template>
 
 <script>
+import Icon from '~/components/Icon'
 export default {
   name: 'Button',
+  components: { Icon },
   props: {
     link: String,
-    text: String,
     icon: String,
     dev: {
       type: Boolean,
@@ -37,7 +40,6 @@ a {
     i {
       @apply mr-1;
     }
-
   }
   &:hover {
     @apply text-primary;

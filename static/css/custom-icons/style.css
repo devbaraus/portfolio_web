@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'custom';
-  src:  url('fonts/custom.eot?eclo9v');
-  src:  url('fonts/custom.eot?eclo9v#iefix') format('embedded-opentype'),
-    url('fonts/custom.ttf?eclo9v') format('truetype'),
-    url('fonts/custom.woff?eclo9v') format('woff'),
-    url('fonts/custom.svg?eclo9v#custom') format('svg');
+  src:  url('fonts/custom.eot?hirr1w');
+  src:  url('fonts/custom.eot?hirr1w#iefix') format('embedded-opentype'),
+    url('fonts/custom.ttf?hirr1w') format('truetype'),
+    url('fonts/custom.woff?hirr1w') format('woff'),
+    url('fonts/custom.svg?hirr1w#custom') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-netlify-plain:before {
+  content: "\e908";
+}
+.devicon-netlify-wordmark:before {
+  content: "\e909";
+}
 .devicon-spotify-plain:before {
   content: "\e906";
 }

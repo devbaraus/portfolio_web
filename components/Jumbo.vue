@@ -21,22 +21,25 @@
               text="GitHub"
               link="https://github.com/devbaraus"
               icon="github"
-            />
+            >GitHub</Button>
             <Button
               text="Instagram"
               link="https://instagram.com/devbaraus"
               icon="instagram"
-            />
+            >Instagram</Button>
             <Button
-              text="Linkedin"
               link="https://linkedin.com/in/devbaraus"
               icon="linkedin"
-            />
+            >Linkedin</Button>
             <Button
-              text="Twitter"
               link="https://twitter.com/devbaraus"
               icon="twitter"
-            />
+            >Twitter</Button>
+            <Button
+              link="https://app.rocketseat.com.br/me/devbaraus"
+              :dev="true"
+              icon="rocketseat"
+            >Rocketseat</Button>
           </div>
         </div>
       </div>

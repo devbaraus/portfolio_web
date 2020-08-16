@@ -1,5 +1,271 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #CDD3D8;
+  font-family: "Fira Mono", monospace;
+  font-size: 1em;
+}
 
+.hljs > *::selection {
+  background-color: #3e4451;
+}
 
+.hljs-comment {
+  color: #656565;
+  font-style: italic;
+}
+
+.hljs-selector-tag {
+  color: #C792EA;
+}
+
+.hljs-string,
+.hljs-subst {
+  color: #C3E88D;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-variable,
+.hljs-template-variable {
+  color: #F77669;
+}
+
+.hljs-keyword {
+  color: #C792EA;
+}
+
+.hljs-function > .hljs-title {
+  color: #75A5FF;
+}
+
+.hljs-tag {
+  color: #abb2bf;
+}
+
+.hljs-name {
+  color: #e06c75;
+}
+
+.hljs-type {
+  color: #da4939;
+}
+
+.hljs-attribute {
+  color: #80CBBF;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-link {
+  color: #C792EA;
+}
+
+.hljs-params {
+  color: #EEFFF7;
+}
+
+.hljs-meta {
+  color: #75A5FF;
+}
+
+.hljs-title {
+  color: #75A5FF;
+}
+
+.hljs-section {
+  color: #ffc66d;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-selector-class {
+  color: #FFCB68;
+}
+
+.hljs-selector-id {
+  color: #F77669;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown * {
+  @apply my-4;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  @apply font-bold my-6;
+}
+.markdown h1 {
+  @apply text-3xl;
+}
+.markdown h2 {
+  @apply text-2xl;
+}
+.markdown h3 {
+  @apply text-xl;
+}
+.markdown h4 {
+  @apply text-lg;
+}
+.markdown h5,
+.markdown h6 {
+  @apply text-base font-bold my-6;
+}
+.markdown a {
+  @apply relative;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: background-position 200ms ease-in, padding 200ms ease-in-out;
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), rgba(238, 86, 34, 0.35) calc(50% - 8px), rgba(238, 86, 34, 0.35) 100%);
+}
+.markdown a:hover {
+  background-image: linear-gradient(transparent, transparent calc(50% - 8px), rgba(238, 86, 34, 0.8) calc(50% - 8px), rgba(238, 86, 34, 0.8));
+  background-position: 0 100%;
+}
+.markdown p {
+  @apply text-base my-2 text-justify;
+}
+.markdown img {
+  @apply max-w-full mx-auto mb-4 inline;
+}
+.markdown ul {
+  @apply list-disc ml-6;
+}
+.markdown ol {
+  @apply list-decimal ml-6;
+}
+.markdown blockquote {
+  border-left: solid var(--color-primary);
+  @apply pl-4 text-justify w-full;
+}
+.markdown code {
+  @apply p-3 shadow bg-light text-white max-w-full block rounded overflow-x-auto;
+}
+.markdown p code {
+  @apply inline break-words p-0 px-1;
+}
+.markdown pre code.css,
+.markdown pre code.html,
+.markdown pre code.js,
+.markdown pre code.javascript,
+.markdown pre code.ts,
+.markdown pre code.ts,
+.markdown pre code.typescript,
+.markdown pre code.md,
+.markdown pre code.markdown,
+.markdown pre code.php,
+.markdown pre code.kotlin,
+.markdown pre code.kt,
+.markdown pre code.python,
+.markdown pre code.py {
+  @apply relative pt-8;
+}
+.markdown pre code.css:after,
+.markdown pre code.html:after,
+.markdown pre code.js:after,
+.markdown pre code.javascript:after,
+.markdown pre code.ts:after,
+.markdown pre code.typescript:after,
+.markdown pre code.md:after,
+.markdown pre code.markdown:after,
+.markdown pre code.php:after,
+.markdown pre code.kotlin:after,
+.markdown pre code.kt:after,
+.markdown pre code.python:after,
+.markdown pre code.py:after {
+  @apply p-1 absolute bg-primary-light overflow-hidden;
+  top: -1px;
+}
+.markdown pre code.css:after {
+  content: "css";
+}
+.markdown pre code.js:after,
+.markdown pre code.javascript:after {
+  content: "javascript";
+}
+.markdown pre code.ts:after,
+.markdown pre code.typescript:after {
+  content: "typescript";
+}
+.markdown pre code.markdown:after,
+.markdown pre code.md:after {
+  content: "markdown";
+}
+.markdown pre code.html:after {
+  content: "html";
+}
+.markdown pre code.py:after,
+.markdown pre code.python:after {
+  content: "python";
+}
+.markdown pre code.php:after {
+  content: "php";
+}
+.markdown pre code::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.markdown pre code::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+.markdown pre code::-webkit-scrollbar-thumb {
+  @apply bg-dark;
+  transition: background-color 0.3s;
+}
+.markdown pre code::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark;
+}
+.markdown table {
+  @apply bg-light text-gray-light table;
+}
+.markdown table thead {
+  @apply font-bold align-baseline;
+}
+.markdown table th,
+.markdown table td {
+  @apply px-3 px-3;
+}
+.markdown table th + td,
+.markdown table td + td {
+  @apply border-l-1 border-solid border-gray-light;
+}
+.markdown table tbody {
+  @apply align-middle table-row-group;
+}
+.markdown table tbody tr:nth-child(2n) {
+  @apply bg-dark;
+}
+.markdown table tbody tr td {
+  @apply table-cell;
+}
+
+/*# sourceMappingURL=tailwind.css.map */

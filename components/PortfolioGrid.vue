@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-grid">
     <article v-for="project in projects" :key="project.url" class="portfolio">
-      <div class="portfolio-header">
+      <nuxt-link tag="div" :to="`/${level}/${project.id}`" class="portfolio-header">
         <img
           :src="project.cover"
           :alt="`${project.name} Cover`"
@@ -16,12 +16,12 @@
 <!--            <i class="icon-external-link"></i>-->
 <!--          </div>-->
         </div>
-      </div>
+      </nuxt-link>
 <!--      <div class="portfolio-body">-->
 <!--        {{project.desc}}-->
 <!--      </div>-->
-      <div class="portfolio-footer">
-        <icon v-for="label in project.labels" :key="label" :dev="true" :name="labelToIcon(label)" class="portfolio-badge"/>
+      <div class="portfolio-footer" v-if="project.labels.length > 0">
+        <icon v-for="label in project.labels" :key="label" :dev="true" :name="label" class="portfolio-badge"/>
       </div>
     </article>
   </div>
@@ -35,12 +35,8 @@ export default {
   name: 'PortfolioGrid',
   components: { Icon },
   props: {
-    projects: Array
-  },
-  methods: {
-    labelToIcon(name){
-      return langToIcon(name)
-    }
+    projects: Array,
+    level: String
   },
   data: () => ({
     // projects: [
@@ -116,7 +112,7 @@ export default {
     }
   }
   .portfolio-footer {
-    @apply flex items-center gap-2;
+    @apply flex h-16 items-center gap-2;
 
     i {
       @apply text-xl mr-2;

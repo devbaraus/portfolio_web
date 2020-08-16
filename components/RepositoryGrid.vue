@@ -3,7 +3,7 @@
     <article v-for="repo in repos" class="repo">
       <div class="repo-header">
         <div>
-          <p>{{repo.name}}</p>
+          <nuxt-link :to="`/repo/${repo.name}`" tag="a">{{repo.name}}</nuxt-link>
         </div>
         <div class="flex items-center justify-between">
           <a :href="repo.html_url" rel="noopener noreferrer" target="_blank"><i class="icon-external-link"></i></a>
@@ -12,8 +12,8 @@
       <div class="repo-body">
         {{repo.description}}
       </div>
-      <div class="repo-footer">
-        <icon v-for="lang in repo.languages" :key="lang" :dev="true" :name="langToIcon(lang)" class="repo-badge"/>
+      <div class="repo-footer" v-if="repo.languages.length > 0">
+        <icon v-for="lang in repo.languages" :key="lang" :dev="true" :name="lang" class="repo-badge"/>
       </div>
     </article>
   </div>
@@ -24,11 +24,6 @@ import { langToIcon } from '~/utils'
 
 export default {
   name: 'RepositoryGrid',
-  methods: {
-    langToIcon(name){
-      return langToIcon(name)
-    }
-  },
   props: {
     repos: Array,
   },
@@ -47,9 +42,11 @@ export default {
   }
   .repo-header {
     @apply bg-primary  w-full flex justify-between;
-
-    p {
-      @apply text-xl font-bold;
+    & > div > a {
+      @apply text-xl font-bold cursor-pointer transition duration-200 ease-in;
+      &:hover {
+        @apply opacity-75;
+      }
     }
     span {
       @apply text-sm;
@@ -60,7 +57,7 @@ export default {
     }
   }
   .repo-footer {
-    @apply flex items-center gap-2;
+    @apply flex h-16 items-center gap-2;
     i {
       @apply text-xl mr-2;
     }
