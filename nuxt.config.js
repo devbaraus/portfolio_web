@@ -98,8 +98,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL:
-      'https://cors-anywhere.herokuapp.com/https://portfolio-serverapi.herokuapp.com/',
+    baseURL: 'https://portfolio-serverapi.herokuapp.com/',
     // baseURL:'http://localhost:3333/',
   },
   /*
