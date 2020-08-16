@@ -7,11 +7,11 @@
       <h5 id="skill">Habilidades</h5>
       <skills-grid />
     </section>
-    <section class="container portfolio-section">
+    <section v-if="projects" class="container portfolio-section">
       <h5 id="projects">Projetos</h5>
       <portfolio-grid :projects="projects" level="projects" />
     </section>
-    <section class="container portfolio-section">
+    <section v-if="sides" class="container portfolio-section">
       <h5 id="side-projects">Projetos pessoais</h5>
       <portfolio-grid :projects="sides" level="sides" />
     </section>
