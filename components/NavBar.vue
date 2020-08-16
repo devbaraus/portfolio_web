@@ -118,9 +118,13 @@ nav {
   nav {
     @apply h-full flex items-center justify-center;
     ul {
-      @apply flex flex-col gap-8 justify-between;
-      li a {
-        @apply text-3xl;
+      @apply flex flex-col justify-between;
+
+      li {
+        @apply mb-8;
+        a {
+          @apply text-3xl;
+        }
       }
     }
   }
