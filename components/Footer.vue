@@ -41,18 +41,19 @@
       </div>
       <div class="footer-form">
         <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
-          <label for="name">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Nome completo"
-            />
-          </label>
-          <label for="email">
-            <input type="email" name="email" id="email" placeholder="E-mail" />
-          </label>
-          <label for="message" class="col-span-2">
+          <div class="form-grid">
+            <label for="name">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nome completo"
+              />
+            </label>
+            <label for="email">
+              <input type="email" name="email" id="email" placeholder="E-mail" />
+            </label>
+            <label for="message" class="col-span-2">
             <textarea
               name="message"
               id="message"
@@ -60,9 +61,12 @@
               rows="10"
               placeholder="Mensagem"
             ></textarea>
-          </label>
-          <div data-netlify-recaptcha="true"></div>
-          <button type="submit">Enviar</button>
+            </label>
+          </div>
+          <div class="form-flex">
+            <div data-netlify-recaptcha="true"></div>
+            <button type="submit">Enviar</button>
+          </div>
         </form>
       </div>
     </div>
@@ -98,7 +102,13 @@ export default {
   }
   .footer-form {
     form {
-      @apply grid grid-cols-2 col-gap-2 row-gap-2;
+      .form-grid {
+        @apply grid grid-cols-2 col-gap-2 row-gap-2 mb-2;
+      }
+      .form-flex {
+        @apply flex items-center justify-between;
+      }
+
       button {
         @apply py-2 px-3 bg-dark text-gray-light col-start-2 transition-all duration-200 ease-in;
         &:hover {
