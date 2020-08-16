@@ -61,6 +61,7 @@
               placeholder="Mensagem"
             ></textarea>
           </label>
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit">Enviar</button>
         </form>
       </div>
