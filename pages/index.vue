@@ -30,17 +30,17 @@ import PortfolioGrid from '~/components/PortfolioGrid'
 
 export default {
   components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
-  // async asyncData({ params }) {
-  //   const baseURL = 'http://192.168.15.45:3333'
-  //
-  //   let repos = await (await fetch(baseURL + '/repos')).json()
-  //
-  //   let projects = await (await fetch(baseURL + '/projects')).json()
-  //
-  //   let sides = await (await fetch(baseURL + '/sides')).json()
-  //
-  //   return { repos, projects, sides }
-  // },
+  async asyncData({ params }) {
+    const baseURL = 'http://192.168.15.45:3333'
+
+    let repos = await (await fetch(baseURL + '/repos')).json()
+
+    let projects = await (await fetch(baseURL + '/projects')).json()
+
+    let sides = await (await fetch(baseURL + '/sides')).json()
+
+    return { repos, projects, sides }
+  },
 }
 </script>
 
