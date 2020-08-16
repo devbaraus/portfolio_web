@@ -1,0 +1,29 @@
+{
+  "name": "portifolio_web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "start:render": "nuxt build & nuxt start",
+    "tailwind:build": "tailwind build assets/css/tailwind.css -o assets/css/tailwind.core.css"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.5.0",
+    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "highlight.js": "^10.1.2",
+    "markdown-it": "^11.0.0",
+    "nuxt": "^2.14.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^2.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "sass-loader": "^9.0.3"
+  }
+}
