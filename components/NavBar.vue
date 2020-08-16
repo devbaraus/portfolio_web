@@ -64,8 +64,11 @@ export default {
         label: 'Habilidades',
       },
       {
-        url: '/#portfolio',
-        label: 'Portfólio',
+        url: '/#projects',
+        label: 'Projetos',
+      },{
+        url: '/#side-projects',
+        label: 'Pessoais',
       },
       {
         url: '/#repo',
