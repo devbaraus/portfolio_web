@@ -40,31 +40,47 @@
         >
       </div>
       <div class="footer-form">
-        <form name="contact" action="/form-success" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <form
+          name="contact"
+          action="/form-success"
+          method="POST"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+        >
           <div class="form-grid">
             <label for="name">
               <input
                 type="text"
                 name="name"
                 id="name"
+                required
                 placeholder="Nome completo"
               />
             </label>
             <label for="email">
-              <input type="email" name="email" id="email" placeholder="E-mail" />
+              <input
+                type="email"
+                required
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
             </label>
             <label for="message" class="col-span-2">
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Mensagem"
-            ></textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                required
+                placeholder="Mensagem"
+              ></textarea>
             </label>
           </div>
           <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
-          <div class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap gap-2">
+          <div
+            class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap gap-2"
+          >
             <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
@@ -74,9 +90,24 @@
     <div class="container">
       <p class="text-xs pb-4 text-center">
         Desenvolvido utilizando
-        <a href="http://nuxtjs.org" target="_blank" rel="noopener" class="link">NuxtJS</a>,
-        <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="link">TailwindCSS</a>,
-        <a href="https://netilify.com/" target="_blank" rel="noopener" class="link">Netlify</a> entre outras tecnologias.
+        <a href="http://nuxtjs.org" target="_blank" rel="noopener" class="link"
+          >NuxtJS</a
+        >,
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener"
+          class="link"
+          >TailwindCSS</a
+        >,
+        <a
+          href="https://netilify.com/"
+          target="_blank"
+          rel="noopener"
+          class="link"
+          >Netlify</a
+        >
+        entre outras tecnologias.
       </p>
     </div>
   </footer>
