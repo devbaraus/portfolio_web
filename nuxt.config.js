@@ -21,7 +21,8 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: process.env.NODE_ENV === 'production' ? 'universal' : 'spa',
+  mode: 'universal',
+  // mode: 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -98,9 +99,8 @@ export default {
    */
   axios: {
     baseURL:
-      process.env.NODE_ENV === 'production'
-        ? 'https://cors-anywhere.herokuapp.com/https://portfolio-serverapi.herokuapp.com/'
-        : 'http://localhost:3333/',
+      'https://cors-anywhere.herokuapp.com/https://portfolio-serverapi.herokuapp.com/',
+    // baseURL:'http://localhost:3333/',
   },
   /*
    ** Content module configuration
