@@ -40,7 +40,7 @@
         >
       </div>
       <div class="footer-form">
-        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <form name="contact" action="/form-success" method="POST" data-netlify-recaptcha="true" data-netlify="true">
           <div class="form-grid">
             <label for="name">
               <input
@@ -63,7 +63,8 @@
             ></textarea>
             </label>
           </div>
-          <div class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap">
+          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
+          <div class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap gap-2">
             <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
@@ -71,7 +72,7 @@
       </div>
     </div>
     <div class="container">
-      <p class="text-xs pb-4">
+      <p class="text-xs pb-4 text-center">
         Desenvolvido utilizando
         <a href="http://nuxtjs.org" target="_blank" rel="noopener" class="link">NuxtJS</a>,
         <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="link">TailwindCSS</a>,
@@ -107,7 +108,7 @@ export default {
       }
 
       button {
-        @apply py-2 px-3 bg-dark text-gray-light col-start-2 transition-all duration-200 ease-in;
+        @apply py-2 px-8 h-full bg-dark text-gray-light col-start-2 transition-all duration-200 ease-in;
         &:hover {
           @apply bg-primary;
         }
