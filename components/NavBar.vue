@@ -35,7 +35,12 @@
         </span>
         <ul class="hidden list-reset md:flex">
           <li v-for="link in links" :key="link.url">
-            <nuxt-link :to="link.url" tag="a">{{ link.label }}</nuxt-link>
+            <nuxt-link
+              :to="link.url"
+              tag="a"
+              :class="link.button && 'text-gray-light py-1 px-2 bg-dark'"
+              >{{ link.label }}</nuxt-link
+            >
           </li>
         </ul>
       </nav>
@@ -66,10 +71,11 @@ export default {
       {
         url: '/#projects',
         label: 'Projetos',
-      },{
-        url: '/#side-projects',
-        label: 'Pessoais',
       },
+      // {
+      //   url: '/#side-projects',
+      //   label: 'Pessoais',
+      // },
       {
         url: '/#repo',
         label: 'Repositórios',
@@ -77,6 +83,11 @@ export default {
       {
         url: '/#blog',
         label: 'Blog',
+      },
+      {
+        url: '/#contact',
+        button: true,
+        label: 'Contato',
       },
     ],
   }),

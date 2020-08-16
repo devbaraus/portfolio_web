@@ -7,9 +7,7 @@
       <h5 id="skill">Habilidades</h5>
       <skills-grid />
     </section>
-    <section
-      :class="`container ${projects.length < 1 && 'hidden'}`"
-    >
+    <section :class="`container ${projects.length < 1 && 'hidden'}`">
       <h5 id="projects">Projetos</h5>
       <portfolio-grid :projects="projects" level="projects" />
     </section>
@@ -32,19 +30,27 @@ import PortfolioGrid from '~/components/PortfolioGrid'
 
 export default {
   components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
-  async asyncData({ app }) {
-    let repos = []
-    let projects = []
-    let sides = []
-    let articles = []
-
-    repos = await (await app.$axios.get('repos')).data
+  async asyncData({ $axios, store }) {
+    store.commit('repos', await (await $axios.get('repos')).data)
 
     // projects = await (await app.$axios.get( 'projects')).data
     //
     // sides = await (await app.$axios.get( 'sides')).data
     //
-    return { repos, projects, sides, articles }
+  },
+  computed: {
+    repos() {
+      return this.$store.state.repos
+    },
+    articles() {
+      return this.$store.state.articles
+    },
+    projects() {
+      return this.$store.state.projects
+    },
+    sides() {
+      return this.$store.state.sides
+    },
   },
 }
 </script>

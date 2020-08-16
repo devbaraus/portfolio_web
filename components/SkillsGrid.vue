@@ -25,39 +25,39 @@ export default {
         heading: 'Controle de Versão Git',
         icon: 'git',
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'Versionamento de código utilizando GitHub ou GitLab',
       },
       {
         heading: 'Desenvolvimento Back End',
         icon: 'nodejs',
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'NodeJS, Express, Django, Yii2, PosgreSQL, MySQL, SQLite, MongoDB e AJAX',
       },
       {
         heading: 'Desenvolvimento Front End',
         icon: 'vuejs',
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'HTML5, CSS3, JavaScript, VueJS, ReactJS, TailwindCSS, Bootstrap e SASS',
       },
       {
         heading: 'Conteinerização',
         icon: 'docker',
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'Configuração de aplicações back end e front end em ambiente docker',
       },
       {
         heading: 'Auto-didata',
         icon: 'book-open',
         iconFeather: true,
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'Busca de conhecimento utilizando documentação, vídeos e livros',
       },
       {
         heading: 'Design de Aplicações',
         icon: 'figma',
         iconFeather: true,
         desc:
-          'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
+          'Photoshop, Illustrator, Premiere Pro, Figma e Adobe XD',
       },
     ],
   }),

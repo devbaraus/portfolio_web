@@ -1,8 +1,14 @@
 <template>
-  <footer class="bg-gray-light">
+  <footer id="contact" class="bg-gray-light">
     <div class="container py-8 flex-wrap md:flex-no-wrap">
       <div class="footer-links">
         <p class="text-2xl font-ubuntu my-2">Entre em contato</p>
+        <a
+          href="mailto:contato@baraus.dev"
+          rel="noopener noreferrer"
+          class="link"
+        ><icon name="mail"></icon> contato@baraus.dev </a
+        >
         <a
           href="https://instagram.com/devbaraus"
           target="_blank"
@@ -44,7 +50,6 @@
           name="contact"
           action="/form-success"
           method="POST"
-          data-netlify-recaptcha="true"
           data-netlify="true"
         >
           <div class="form-grid">
@@ -77,11 +82,10 @@
               ></textarea>
             </label>
           </div>
-          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
+<!--          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>-->
           <div
-            class="form-flex flex items-center justify-center flex-wrap md:justify-between md:flex-no-wrap gap-2"
+            class="form-flex flex items-center justify-end"
           >
-            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
         </form>

@@ -5,14 +5,8 @@
     rel="noopener noreferrer"
     class="bg-dark px-4 py-2 rounded-lg text-white"
   >
-    <Icon :dev="dev" :name="icon" class="text-base" />
+    <Icon :dev="dev" :name="icon" :class="`text-base ${!icon && 'hidden'}`" />
     <slot></slot>
-    <!--    <span v-if="!dev">-->
-    <!--      <i :class="`icon-${icon} text-base`" /> -->
-    <!--    </span>-->
-    <!--    <span v-else>-->
-    <!--      <i :class="`devicon-${icon}-plain text-xl`" /> {{ text }}-->
-    <!--    </span>-->
   </a>
 </template>
 
@@ -23,7 +17,10 @@ export default {
   components: { Icon },
   props: {
     link: String,
-    icon: String,
+    icon: {
+      type: String,
+      default: ''
+    },
     dev: {
       type: Boolean,
       default: false,

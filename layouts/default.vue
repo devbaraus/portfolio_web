@@ -15,7 +15,8 @@
     components: {
       Footer,
       TopBar
-    }
+    },
+
   }
 </script>
 
