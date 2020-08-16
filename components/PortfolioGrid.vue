@@ -3,23 +3,17 @@
     <article v-for="project in projects" :key="project.url" class="portfolio">
       <nuxt-link tag="div" :to="`/${level}/${project.id}`" class="portfolio-header">
         <img
-          :src="project.cover"
+          :data-src="project.cover"
           :alt="`${project.name} Cover`"
           class="portfolio-img"
+          v-lazy-load
         />
         <div class="portfolio-header-content">
           <div>
             <p>{{project.name}}</p>
-            <!--            <span>Criado em: 2020-02-16</span>-->
           </div>
-<!--          <div class="flex items-center justify-between">-->
-<!--            <i class="icon-external-link"></i>-->
-<!--          </div>-->
         </div>
       </nuxt-link>
-<!--      <div class="portfolio-body">-->
-<!--        {{project.desc}}-->
-<!--      </div>-->
       <div class="portfolio-footer" v-if="project.labels.length > 0">
         <icon v-for="label in project.labels" :key="label" :dev="true" :name="label" class="portfolio-badge"/>
       </div>
@@ -38,40 +32,6 @@ export default {
     projects: Array,
     level: String
   },
-  data: () => ({
-    // projects: [
-    //   {
-    //     heading: 'CPA - Comissão Própria de Avaliação',
-    //     img: {
-    //       url: 'https://baraus.dev/img/projetos/sites/cpa/cpa_home.png',
-    //       alt: 'Plataforma CPA Dashboard'
-    //     },
-    //     url: 'https://cpa.bcc.ifg.edu.br',
-    //     desc: 'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
-    //     labels: ['vuejs', 'python', 'docker']
-    //   },
-    //   {
-    //     heading: 'IFG Produz',
-    //     url: 'https://lattes.bcc.ifg.edu.br',
-    //     img: {
-    //       url: 'https://baraus.dev/img/projetos/sites/lattes/lattes_home.png',
-    //       alt: 'Plataforma IFG Produz'
-    //     },
-    //     desc: 'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
-    //     labels: ['vuejs', 'python', 'docker']
-    //   },
-    //   {
-    //     heading: 'PAI - Processo de Avaliação Interno',
-    //     // url: 'https://lattes.bcc.ifg.edu.br',
-    //     img: {
-    //       url: 'https://baraus.dev/img/projetos/sites/pai/pai_home.png',
-    //       alt: 'Plataforma IFG Produz'
-    //     },
-    //     desc: 'Bot para Discord criado em Javascript utilizando as bibliotecas "DiscordJS" e "Canvas".',
-    //     labels: ['php', 'yii', 'docker']
-    //   },
-    // ]
-  })
 }
 </script>
 

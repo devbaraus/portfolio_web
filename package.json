@@ -7,7 +7,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "start:render": "nuxt build & nuxt start",
     "tailwind:build": "tailwind build assets/css/tailwind.css -o assets/css/tailwind.core.css",
     "sass:watch": "sass --watch assets/css/tailwind.scss assets/css/tailwind.css"
   },
@@ -22,6 +21,7 @@
     "nuxt-lazy-load": "^1.2.4"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^2.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",

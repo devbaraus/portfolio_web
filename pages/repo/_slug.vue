@@ -1,12 +1,15 @@
 <template>
   <div class="bg-gray-light text-dark py-8">
-    <div id="repo-header" class="container md:flex">
+    <div id="repo-header" class="container md:flex pb-8">
       <div>
-        <h1>{{ repo.name }}</h1>
+        <h1 class="text-3xl md:text-4xl">{{ repo.name }}</h1>
         <p>
           {{ repo.description }}
         </p>
-        <div class="languages h-16 flex justify-start gap-4 items-center">
+        <div
+          v-if="repo.languages.length > 0"
+          class="languages h-16 flex justify-start gap-4 items-center"
+        >
           <Icon
             v-for="lang in repo.languages"
             :key="lang"
@@ -16,7 +19,11 @@
           ></Icon>
         </div>
       </div>
-      <Button icon="external-link" :link="repo.url">Acessar repositório</Button>
+      <div class="mt-8 md:mt-0">
+        <Button icon="external-link" :link="repo.url"
+          >Acessar repositório</Button
+        >
+      </div>
     </div>
     <div
       id="repo-content-readme"
@@ -48,9 +55,9 @@ export default {
 
 <style lang="scss" scoped>
 #repo-header {
-  @apply  justify-between items-baseline;
+  @apply justify-between items-baseline;
   h1 {
-    @apply text-4xl font-bold;
+    @apply font-bold;
   }
 }
 </style>

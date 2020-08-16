@@ -53,8 +53,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
+        href: '/css/devicons/devicon.min.css',
       },
       {
         rel: 'stylesheet',
@@ -86,6 +85,12 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-175567899-1',
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
@@ -94,6 +99,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-lazy-load',
+
     // Doc: https://github.com/nuxt/content
     // '@nuxt/content',
   ],

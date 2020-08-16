@@ -7,15 +7,17 @@
       <h5 id="skill">Habilidades</h5>
       <skills-grid />
     </section>
-    <section v-if="projects" class="container portfolio-section">
+    <section
+      :class="`container ${projects.length < 1 && 'hidden'}`"
+    >
       <h5 id="projects">Projetos</h5>
       <portfolio-grid :projects="projects" level="projects" />
     </section>
-    <section v-if="sides" class="container portfolio-section">
+    <section :class="`container ${sides.length < 1 && 'hidden'}`">
       <h5 id="side-projects">Projetos pessoais</h5>
       <portfolio-grid :projects="sides" level="sides" />
     </section>
-    <section class="container repo-section">
+    <section :class="`container ${repos.length < 1 && 'hidden'}`">
       <h5 id="repo">Repositórios</h5>
       <repository-grid :repos="repos" />
     </section>
@@ -31,13 +33,18 @@ import PortfolioGrid from '~/components/PortfolioGrid'
 export default {
   components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
   async asyncData({ app }) {
-    let repos = await (await app.$axios.get('repos')).data
+    let repos = []
+    let projects = []
+    let sides = []
+    let articles = []
 
-    // let projects = await (await app.$axios.get( 'projects')).data
+    repos = await (await app.$axios.get('repos')).data
+
+    // projects = await (await app.$axios.get( 'projects')).data
     //
-    // let sides = await (await app.$axios.get( 'sides')).data
+    // sides = await (await app.$axios.get( 'sides')).data
     //
-    return { repos }
+    return { repos, projects, sides, articles }
   },
 }
 </script>
