@@ -40,7 +40,7 @@
         >
       </div>
       <div class="footer-form">
-        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
           <label for="name">
             <input
               type="text"
