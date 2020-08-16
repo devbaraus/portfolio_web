@@ -21,8 +21,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
-  // mode: 'universal',
+  mode: process.env.NODE_ENV === 'production' ? 'universal' : 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -98,7 +97,10 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'http://localhost:3333/',
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'universal'
+        : 'http://localhost:3333/',
   },
   /*
    ** Content module configuration
