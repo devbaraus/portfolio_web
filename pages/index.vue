@@ -30,7 +30,7 @@ import PortfolioGrid from '~/components/PortfolioGrid'
 
 export default {
   components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
-  async asyncData({ $axios }) {
+  async asyncData({ app,  }) {
     const baseURL = 'https://portfolio-serverapi.herokuapp.com/'
 
     let repos = await (await fetch(baseURL + 'repos')).json()

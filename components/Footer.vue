@@ -36,7 +36,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="link"
-          ><icon name="globe"></icon> rocketseat:devbaraus</a
+          ><icon name="rocketseat" :dev="true"></icon> rocketseat:devbaraus</a
         >
       </div>
       <div class="footer-form">

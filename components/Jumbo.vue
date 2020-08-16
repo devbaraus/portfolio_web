@@ -11,7 +11,7 @@
             Tenho 21 anos, estudante de
             <span class="text-primary">Ciência da Computação</span> e aqui é onde
             compartilho um pouco do meu conhecimento. Sou <span class="text-primary">Desenvolvedor Web Full
-            Stack</span>, tenho experiência em NodeJS, VueJS, Python entre outras
+            Stack</span>, tenho experiência em NodeJS, <icon name="nuxt"></icon> VueJS, Python entre outras
             linguagens e frameworks. Me envolvi na computação aos 16 anos e
             resolvi postar um pouco da minha experiência nesses anos. Espero que
             goste!
@@ -46,9 +46,11 @@
 
 <script>
 import Button from '~/components/Button'
+import Icon from '~/components/Icon'
 export default {
   name: 'Jumbo',
   components: {
+    Icon,
     Button,
   },
   data: () => ({}),

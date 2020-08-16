@@ -41,7 +41,7 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 .repo {
-  @apply bg-light text-gray-light shadow-lg;
+  @apply bg-light text-gray-light shadow-lg flex justify-between flex-col;
   > div {
     @apply p-4;
   }
