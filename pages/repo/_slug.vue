@@ -39,10 +39,10 @@ import markdown from '@/utils/markdown'
 import Button from '@/components/Button'
 import Markdown from '@/components/Markdown'
 export default {
-scrollToTop: true, 
+scrollToTop: true,
   name: 'slug',
   components: { Markdown, Button, Icon },
-  async asyncData({ route, $axios }) {
+  async asyncData({ route, $axios, app }) {
     // console.log(context)
     const repo = (await $axios.get(`repos/${route.params.slug}`)).data
 
