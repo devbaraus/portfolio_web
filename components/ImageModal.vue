@@ -3,7 +3,7 @@
     id="image-modal-container"
     :class="`${
       show ? 'active' : ''
-    } transition-all duration-200 ease-in fixed w-screen h-screen flex items-center justify-center z-50`"
+    } transition-all duration-500 fixed w-screen h-screen flex items-center justify-center z-50`"
   >
     <figure class="z-50">
       <img :src="imageModal.url" :alt="imageModal.name" />
@@ -12,7 +12,7 @@
       </figcaption>
     </figure>
     <div
-      class="image-modal-handle w-screen h-screen bg-dark fixed z-40 cursor-pointer transition-all duration-200 ease-in"
+      class="image-modal-handle w-screen h-screen bg-dark fixed z-40 cursor-pointer transition-all duration-500 ease-in-out"
       @click="show = false"
     ></div>
   </div>
@@ -45,8 +45,14 @@ export default {
 
 <style lang="scss" scoped>
 #image-modal-container {
+  &.active .image-modal-handle{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .image-modal-handle {
     opacity: 0.9;
+    border-bottom-left-radius: 48%;
+    border-bottom-right-radius: 48%;
   }
 
   &,
@@ -57,6 +63,7 @@ export default {
   &.active .image-modal-handle {
     bottom: 0;
   }
+
   img {
     max-height: calc(100vh - 10rem);
     max-width: 100vw;
