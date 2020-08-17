@@ -17,22 +17,6 @@ export default {
     Footer,
     TopBar,
   },
-  created() {
-    if (process.browser) {
-      window.onbeforeunload = function (event) {
-        var s = 'You have unsaved changes. Really leave?'
-        console.log('oi')
-        event = event || window.event
-        if (event) {
-          // This is for IE
-          event.returnValue = s
-        }
-
-        // This is for all other browsers
-        return s
-      }
-    }
-  },
 }
 </script>
 
