@@ -80,10 +80,10 @@ export default {
         url: '/#repo',
         label: 'Repositórios',
       },
-      {
-        url: '/#blog',
-        label: 'Blog',
-      },
+      // {
+      //   url: '/#blog',
+      //   label: 'Blog',
+      // },
       {
         url: '/#contact',
         button: true,
