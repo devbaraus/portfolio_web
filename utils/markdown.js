@@ -1,6 +1,9 @@
 import MarkdownIt from 'markdown-it'
 import markdownAnchor from 'markdown-it-anchor'
+import markdownAttrs from 'markdown-it-attrs'
 import highlight from 'highlight.js'
+import markdownEmoji from 'markdown-it-emoji'
+import twemoji from 'twemoji'
 
 const markdown = new MarkdownIt({
   html: true, // Enable HTML tags in source
@@ -41,6 +44,18 @@ const markdown = new MarkdownIt({
       '</code></pre>'
     )
   },
-}).use(markdownAnchor)
+})
+  .use(markdownAnchor)
+  .use(markdownEmoji)
+  .use(markdownAttrs, {
+    // optional, these are default options
+    leftDelimiter: '{',
+    rightDelimiter: '}',
+    allowedAttributes: [], // empty array = all attributes are allowed
+  })
+
+markdown.renderer.rules.emoji = function (token, idx) {
+  return twemoji.parse(token[idx].content)
+}
 
 export default markdown

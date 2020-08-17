@@ -17,7 +17,7 @@
         </ul>
       </nav>
     </div>
-    <div class="absolute bg-gray-light w-screen z-50">
+    <div class="fixed bg-gray-light w-screen z-50">
       <nav
         class="py-2 flex justify-between items-center w-full container nav-desktop"
       >
@@ -34,7 +34,7 @@
           ></Icon>
         </span>
         <ul class="hidden list-reset md:flex">
-          <li v-for="link in links" :key="link.url">
+          <li v-for="link in links" :key="link.url" :class="''">
             <nuxt-link
               :to="link.url"
               tag="a"

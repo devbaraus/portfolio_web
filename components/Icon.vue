@@ -1,5 +1,6 @@
 <template>
   <i
+    :title="title && name"
     :class="`${
       dev
         ? `devicon-${getName()}-${wordmark ? 'wordmark' : ['express'].includes(getName()) ? 'original' : 'plain'}`
@@ -23,6 +24,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    title: {
+      type: Boolean,
+      default: false,
+    }
   },
   methods: {
     getName(){

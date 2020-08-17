@@ -17,8 +17,11 @@
     "highlight.js": "^10.1.2",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-emoji": "^1.4.0",
     "nuxt": "^2.14.0",
-    "nuxt-lazy-load": "^1.2.4"
+    "nuxt-lazy-load": "^1.2.4",
+    "twemoji": "^13.0.1"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",

@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-grid">
     <article v-for="project in projects" :key="project.url" class="portfolio">
-      <nuxt-link tag="div" :to="`/${level}/${project.id}`" class="portfolio-header">
+      <div class="portfolio-header">
         <img
           :data-src="project.cover"
           :alt="`${project.name} Cover`"
@@ -9,13 +9,22 @@
           v-lazy-load
         />
         <div class="portfolio-header-content">
-          <div>
-            <p>{{project.name}}</p>
-          </div>
+          <nuxt-link
+            tag="a"
+            :to="`/${level}/${project.id}`"
+            class="hover:opacity-75 transition-all text-xl font-bold duration-200 ease-in"
+            >{{ project.name }}</nuxt-link
+          >
         </div>
-      </nuxt-link>
+      </div>
       <div class="portfolio-footer" v-if="project.labels.length > 0">
-        <icon v-for="label in project.labels" :key="label" :dev="true" :name="label" class="portfolio-badge"/>
+        <icon
+          v-for="label in project.labels"
+          :key="label"
+          :dev="true"
+          :name="label"
+          class="portfolio-badge"
+        />
       </div>
     </article>
   </div>
@@ -30,7 +39,7 @@ export default {
   components: { Icon },
   props: {
     projects: Array,
-    level: String
+    level: String,
   },
 }
 </script>
@@ -57,10 +66,6 @@ export default {
 
     .portfolio-img {
       @apply w-full h-48 object-cover;
-    }
-
-    p {
-      @apply text-xl font-bold;
     }
 
     span {

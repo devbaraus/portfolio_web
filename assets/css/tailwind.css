@@ -117,7 +117,7 @@
 }
 
 .markdown * {
-  @apply my-4;
+  @apply my-2;
 }
 .markdown h1,
 .markdown h2,
@@ -150,9 +150,15 @@
   transition: background-position 200ms ease-in, padding 200ms ease-in-out;
   background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), rgba(238, 86, 34, 0.35) calc(50% - 8px), rgba(238, 86, 34, 0.35) 100%);
 }
+.markdown a.no-link {
+  background-image: none;
+}
 .markdown a:hover {
   background-image: linear-gradient(transparent, transparent calc(50% - 8px), rgba(238, 86, 34, 0.8) calc(50% - 8px), rgba(238, 86, 34, 0.8));
   background-position: 0 100%;
+}
+.markdown a:hover.no-link {
+  background-image: none;
 }
 .markdown p {
   @apply text-base my-2 text-justify;
@@ -269,6 +275,11 @@
 }
 .markdown table tbody tr td {
   @apply table-cell;
+}
+.markdown .emoji {
+  height: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=tailwind.css.map */

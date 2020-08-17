@@ -22,11 +22,13 @@ export default {
   data: () => ({
     skills: [
       {
-        heading: 'Controle de Versão Git',
-        icon: 'git',
+        heading: 'Design de Aplicações',
+        icon: 'behance',
+        // iconFeather: true,
         desc:
-          'Versionamento de código utilizando GitHub ou GitLab',
+          'Photoshop, Illustrator, Premiere Pro, Figma, Adobe XD, Behance e Pinterest',
       },
+
       {
         heading: 'Desenvolvimento Back End',
         icon: 'nodejs',
@@ -38,6 +40,12 @@ export default {
         icon: 'vuejs',
         desc:
           'HTML5, CSS3, JavaScript, VueJS, ReactJS, TailwindCSS, Bootstrap e SASS',
+      },
+      {
+        heading: 'Controle de Versão Git',
+        icon: 'git',
+        desc:
+          'Versionamento de código utilizando GitHub ou GitLab',
       },
       {
         heading: 'Conteinerização',
@@ -52,13 +60,7 @@ export default {
         desc:
           'Busca de conhecimento utilizando documentação, vídeos e livros',
       },
-      {
-        heading: 'Design de Aplicações',
-        icon: 'figma',
-        iconFeather: true,
-        desc:
-          'Photoshop, Illustrator, Premiere Pro, Figma e Adobe XD',
-      },
+
     ],
   }),
 }
@@ -68,6 +70,7 @@ export default {
 .skill-set-grid {
   @apply grid mt-4 col-gap-4 row-gap-8;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-template-rows: 1fr;
 }
 .skill-set {
   @apply bg-light pb-4 text-gray-light shadow-lg;

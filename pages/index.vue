@@ -35,7 +35,7 @@ export default {
 
     // projects = await (await app.$axios.get( 'projects')).data
     //
-    // sides = await (await app.$axios.get( 'sides')).data
+    store.commit('sides', await (await $axios.get( 'sides')).data)
     //
   },
   computed: {
