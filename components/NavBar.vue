@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      :class="`fixed nav-mobile h-screen w-screen bg-gray-light z-20 ${
+      :class="`fixed nav-mobile h-screen w-screen bg-gray-light z-10 ${
         open && 'nav-mobile-active'
       }`"
     >
@@ -17,7 +17,7 @@
         </ul>
       </nav>
     </div>
-    <div class="fixed bg-gray-light w-screen z-10">
+    <div class="fixed bg-gray-light w-screen z-20">
       <nav
         class="py-2 flex justify-between items-center w-full container nav-desktop"
       >

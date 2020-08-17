@@ -4,7 +4,7 @@ const manifest = {
   description: 'Meu nome é Bruno de Araújo Alves e este é meu portfólio.',
   lang: 'pt-BR',
   display: 'standalone',
-  background_color: '#31263E',
+  background_color: '#f0f0f7',
   theme_color: '#EE5622',
 }
 

@@ -59,7 +59,7 @@ export default {
   }
   img {
     max-height: calc(100vh - 10rem);
-    max-width: calc(100vw - 10rem);
+    max-width: 100vw;
     object-fit: contain;
   }
 }
