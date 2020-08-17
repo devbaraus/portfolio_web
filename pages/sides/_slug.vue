@@ -2,7 +2,11 @@
   <div class="bg-gray-light text-dark pb-8">
     <div id="side-banner" class="bg-dark h-48">
       <div class="container flex items-center h-full">
-        <img :src="side.cover" :alt="`${side.name} logotipo`" class="container object-contain h-32"/>
+        <img
+          :src="side.cover"
+          :alt="`${side.name} logotipo`"
+          class="container object-contain h-32"
+        />
       </div>
     </div>
     <div id="side-header" class="container md:flex pt-4 pb-8">
@@ -21,7 +25,7 @@
       ></markdown>
       <div id="side-sidebar" class="md:w-4/12 pt-4">
         <ImageCarousel :images="side.images"></ImageCarousel>
-        <hr class="bg-dark my-4">
+        <hr class="bg-dark my-4" />
         <div
           v-if="side.labels.length > 0"
           class="flex justify-center items-center"
@@ -44,11 +48,11 @@
             icon="download"
             class="text-sm px-1"
             :link="content.url"
-          >{{content.name}}</Button>
+            >{{ content.name }}</Button
+          >
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -58,7 +62,6 @@ import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 import ImageCarousel from '@/components/ImageCarousel'
 export default {
-
   name: 'slug',
   components: { ImageCarousel, Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
@@ -69,7 +72,6 @@ export default {
 
     return { side }
   },
-
 }
 </script>
 

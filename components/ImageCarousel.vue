@@ -10,8 +10,16 @@
         }`"
       >
         <!--      <div class="numbertext">1 / 3</div>-->
-        <img :src="image.url" :alt="image.name" style="width: 100%;" class="image-open-modal" />
-        <figcaption>{{image.name}}</figcaption>
+        <img
+          :src="image.url"
+          :alt="image.name"
+          style="width: 100%;"
+          class="image-open-modal"
+          @click="
+            $store.commit('imageModal', { name: image.name, url: image.url })
+          "
+        />
+        <figcaption>{{ image.name }}</figcaption>
       </figure>
       <!-- Next and previous buttons -->
     </div>

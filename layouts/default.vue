@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ImageModal></ImageModal>
     <TopBar />
     <div class="pt-12">
       <Nuxt />
@@ -11,9 +12,11 @@
 <script>
 import TopBar from '~/components/NavBar'
 import Footer from '~/components/Footer'
+import ImageModal from '@/components/ImageModal'
 export default {
   scrollToTop: true,
   components: {
+    ImageModal,
     Footer,
     TopBar,
   },
@@ -74,7 +77,7 @@ a.link:hover {
   background-position: 0 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container {
     @apply px-32;
   }

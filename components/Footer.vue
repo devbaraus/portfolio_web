@@ -1,6 +1,6 @@
 <template>
   <footer id="contact" class="bg-gray-light">
-<!--    <hr class="container">-->
+    <!--    <hr class="container">-->
     <div class="container py-8 flex-wrap md:flex-no-wrap">
       <div class="footer-links mb-8 md:mb-0">
         <p class="text-2xl font-ubuntu my-2">Entre em contato</p>
@@ -8,8 +8,8 @@
           href="mailto:contato@baraus.dev"
           rel="noopener noreferrer"
           class="link"
-        ><icon name="mail"></icon> contato@baraus.dev </a
-        >
+          ><icon name="mail"></icon> contato@baraus.dev
+        </a>
         <a
           href="https://instagram.com/devbaraus"
           target="_blank"
@@ -83,16 +83,20 @@
               ></textarea>
             </label>
           </div>
-<!--          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>-->
-          <div
-            class="form-flex flex items-center justify-end"
-          >
+          <!--          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>-->
+          <div class="form-flex flex items-center justify-end">
             <button type="submit">Enviar</button>
           </div>
         </form>
       </div>
     </div>
-    <div class="container">
+    <div class="container flex flex-col">
+      <a href="https://app.netlify.com/sites/devbaraus/deploys">
+        <img
+          src="https://api.netlify.com/api/v1/badges/1f7e2e0c-d846-4e5a-bed6-efc2b28fd45f/deploy-status"
+          alt="Netlify Status"
+        />
+      </a>
       <p class="text-xs pb-4 text-center">
         Desenvolvido utilizando
         <a href="http://nuxtjs.org" target="_blank" rel="noopener" class="link"
