@@ -1,20 +1,22 @@
 <template>
   <div class="portfolio-grid">
     <article v-for="project in projects" :key="project.url" class="portfolio">
-      <div class="portfolio-header">
+      <div
+        class="portfolio-header "
+      >
         <img
           :src="project.cover"
           :alt="`${project.name} Cover`"
           class="portfolio-img"
         />
-        <div class="portfolio-header-content">
-          <nuxt-link
-            tag="a"
-            :to="`/${level}/${project.id}`"
-            class="hover:opacity-75 transition-all text-xl duration-200 ease-in"
-            >{{ project.name }}</nuxt-link
-          >
-        </div>
+        <nuxt-link
+          :to="`/${level}/${project.id}`"
+          class="portfolio-header-content cursor-pointer hover:opacity-75 transition-all duration-200 ease-in"
+        >
+          <p>
+            {{ project.name }}
+          </p>
+        </nuxt-link>
       </div>
       <div class="portfolio-footer" v-if="project.labels.length > 0">
         <icon

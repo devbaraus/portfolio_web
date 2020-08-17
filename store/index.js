@@ -4,9 +4,8 @@ export const state = () => ({
   projects: [],
   sides: [],
   imageModal: {
-    name:
-      'https://trello-attachments.s3.amazonaws.com/5f36d21ab40f1e2ebb9a39f8/5f386e9dca726866b2d1d06e/a707652ebce9d85fb6da0d0402b59b9a/spotiminy_profile.png',
-    url: 'Perfil do usuário',
+    name: '',
+    url: '',
   },
 })
 
