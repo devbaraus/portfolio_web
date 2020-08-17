@@ -37,4 +37,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+ i + i {
+   @apply ml-2;
+ }
+</style>

@@ -109,7 +109,7 @@ export default {
    */
   axios: {
     baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    // baseURL: 'http://localhost:3333/',
+    // baseURL: 'http://192.168.15.43:3333/',
   },
   /*
    ** Content module configuration

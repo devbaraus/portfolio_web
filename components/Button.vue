@@ -3,9 +3,9 @@
     :href="link"
     target="_blank"
     rel="noopener noreferrer"
-    class="bg-dark px-4 py-2 rounded-none hover:rounded-lg text-white"
+    class="bg-dark px-4 py-2 rounded-none hover:rounded-lg text-gray-light"
   >
-    <Icon :dev="dev" :name="icon" :class="`text-base ${!icon && 'hidden'}`" />
+    <Icon :dev="dev" :name="icon" :class="`${!icon && 'hidden'}`" />
     <slot></slot>
   </a>
 </template>

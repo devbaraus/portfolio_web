@@ -57,7 +57,7 @@ export default {
     }
   }
   .repo-footer {
-    @apply flex h-16 items-center gap-2;
+    @apply flex h-16 items-center;
     i {
       @apply text-xl mr-2;
     }

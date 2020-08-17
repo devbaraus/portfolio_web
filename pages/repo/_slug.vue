@@ -8,7 +8,7 @@
         </p>
         <div
           v-if="repo.languages.length > 0"
-          class="languages h-16 flex justify-start gap-4 items-center"
+          class="languages h-16 flex justify-start items-center"
         >
           <Icon
             v-for="lang in repo.languages"
@@ -25,11 +25,11 @@
         >
       </div>
     </div>
-    <div
+    <Markdown
       id="repo-content-readme"
-      v-html="mdRender(repo.read_me)"
-      class="markdown container"
-    ></div>
+      :content="repo.read_me"
+      class="container"
+    ></Markdown>
   </div>
 </template>
 
@@ -37,12 +37,17 @@
 import Icon from '@/components/Icon'
 import markdown from '@/utils/markdown'
 import Button from '@/components/Button'
+import Markdown from '@/components/Markdown'
 export default {
   name: 'slug',
-  components: { Button, Icon },
+  components: { Markdown, Button, Icon },
   async asyncData({ route, $axios }) {
     // console.log(context)
     const repo = (await $axios.get(`repos/${route.params.slug}`)).data
+
+    app.head.title = `${side.name} | DevBaraus`
+    app.head.description = `Repositório ${side.name} no GitHub.`
+
     return { repo }
   },
   methods: {

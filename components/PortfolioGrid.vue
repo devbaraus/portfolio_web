@@ -11,7 +11,7 @@
           <nuxt-link
             tag="a"
             :to="`/${level}/${project.id}`"
-            class="hover:opacity-75 transition-all text-xl font-bold duration-200 ease-in"
+            class="hover:opacity-75 transition-all text-xl duration-200 ease-in"
             >{{ project.name }}</nuxt-link
           >
         </div>
@@ -58,8 +58,7 @@ export default {
     @apply relative  p-0;
 
     .portfolio-header-content {
-      @apply absolute w-full h-24 flex justify-between p-4 gap-2;
-      background: rgba(238, 86, 34, 0.9);
+      @apply w-full flex justify-between p-4 bg-primary;
       bottom: 0;
     }
 
@@ -76,7 +75,7 @@ export default {
     }
   }
   .portfolio-footer {
-    @apply flex h-16 items-center gap-2;
+    @apply flex h-16 items-center;
 
     i {
       @apply text-xl mr-2;

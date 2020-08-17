@@ -69,7 +69,7 @@ export default {
         label: 'Habilidades',
       },
       {
-        url: '/#projects',
+        url: '/#side-projects',
         label: 'Projetos',
       },
       // {

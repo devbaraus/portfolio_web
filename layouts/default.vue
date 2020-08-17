@@ -21,33 +21,13 @@
 </script>
 
 <style>
-  /*:root {*/
-  /*  --color-gray-light:#F0F0F7;*/
-  /*  --color-dark: #262C35;*/
-  /*  --color-darker: #2F2C42;*/
-  /*  --color-light: #33374D;*/
-  /*  --color-primary-light: #F56565;*/
-  /*  --color-primary: #f54c4c;*/
-  /*  --color-primary-dark: #491e1e;*/
-  /*} */
   :root {
     --color-gray-light:#F0F0F7;
     --color-dark: #31263E;
     --color-darker: #221E22;
     --color-light: #44355B;
-    --color-primary-light: #F56565;
     --color-primary: #EE5622;
-    --color-primary-dark: #491e1e;
   }
-  /*:root {*/
-  /*  --color-gray-light:#F0F0F7;*/
-  /*  --color-dark: #666a86;*/
-  /*  --color-darker: #333333;*/
-  /*  --color-light: #95B8D1;*/
-  /*  --color-primary-light: #F56565;*/
-  /*  --color-primary: #E8DDB5;*/
-  /*  --color-primary-dark: #491e1e;*/
-  /*}*/
 
   html,
   body {

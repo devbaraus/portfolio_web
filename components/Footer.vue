@@ -1,7 +1,8 @@
 <template>
   <footer id="contact" class="bg-gray-light">
+<!--    <hr class="container">-->
     <div class="container py-8 flex-wrap md:flex-no-wrap">
-      <div class="footer-links">
+      <div class="footer-links mb-8 md:mb-0">
         <p class="text-2xl font-ubuntu my-2">Entre em contato</p>
         <a
           href="mailto:contato@baraus.dev"
@@ -48,8 +49,8 @@
       <div class="footer-form">
         <form
           name="contact"
-          action="/form-success"
           method="POST"
+          data-netlify-recaptcha
           data-netlify="true"
         >
           <div class="form-grid">
