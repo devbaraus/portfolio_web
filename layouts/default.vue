@@ -12,6 +12,7 @@
   import TopBar from '~/components/NavBar'
   import Footer from '~/components/Footer'
   export default {
+scrollToTop: true, 
     components: {
       Footer,
       TopBar
