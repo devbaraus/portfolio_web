@@ -29,6 +29,7 @@ import RepositoryGrid from '~/components/RepositoryGrid'
 import PortfolioGrid from '~/components/PortfolioGrid'
 
 export default {
+scrollToTop: true,
   components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
   async asyncData({ $axios, store }) {
     store.commit('repos', await (await $axios.get('repos')).data)
