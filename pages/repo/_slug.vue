@@ -39,6 +39,7 @@ import markdown from '@/utils/markdown'
 import Button from '@/components/Button'
 import Markdown from '@/components/Markdown'
 export default {
+scrollToTop: true, 
   name: 'slug',
   components: { Markdown, Button, Icon },
   async asyncData({ route, $axios }) {
