@@ -99,7 +99,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-lazy-load',
 
     // Doc: https://github.com/nuxt/content
     // '@nuxt/content',

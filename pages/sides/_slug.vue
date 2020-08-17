@@ -2,7 +2,7 @@
   <div class="bg-gray-light text-dark">
     <div id="side-banner" class="bg-dark h-48">
       <div class="container flex items-center h-full">
-        <img :data-src="side.cover" :alt="`${side.name} logotipo`" class="container object-contain h-32" v-lazy-load/>
+        <img :src="side.cover" :alt="`${side.name} logotipo`" class="container object-contain h-32" v-lazy-load/>
       </div>
     </div>
     <div id="side-header" class="container md:flex pt-4 pb-8">

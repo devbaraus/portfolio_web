@@ -3,10 +3,9 @@
     <article v-for="project in projects" :key="project.url" class="portfolio">
       <div class="portfolio-header">
         <img
-          :data-src="project.cover"
+          :src="project.cover"
           :alt="`${project.name} Cover`"
           class="portfolio-img"
-          v-lazy-load
         />
         <div class="portfolio-header-content">
           <nuxt-link
