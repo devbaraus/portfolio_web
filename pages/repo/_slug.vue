@@ -39,15 +39,15 @@ import markdown from '@/utils/markdown'
 import Button from '@/components/Button'
 import Markdown from '@/components/Markdown'
 export default {
-scrollToTop: true,
+  scrollToTop: true,
   name: 'slug',
   components: { Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
     // console.log(context)
     const repo = (await $axios.get(`repos/${route.params.slug}`)).data
 
-    app.head.title = `${side.name} | DevBaraus`
-    app.head.description = `Repositório ${side.name} no GitHub.`
+    app.head.title = `${repo.name} | DevBaraus`
+    app.head.description = `Repositório ${repo.name} no GitHub.`
 
     return { repo }
   },
