@@ -50,7 +50,7 @@
         <form
           name="contact"
           method="POST"
-          action="/form-success"
+          action="/form-success/"
           data-netlify-recaptcha="true"
           data-netlify="true"
         >
