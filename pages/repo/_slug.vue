@@ -55,7 +55,7 @@ export default {
     mdRender(string) {
       return markdown.render(string)
     },
-  },
+  }
 }
 </script>
 

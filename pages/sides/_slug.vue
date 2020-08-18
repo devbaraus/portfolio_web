@@ -72,7 +72,7 @@ export default {
     app.head.description = `Projeto pessoal ${side.name}.`
 
     return { side }
-  },
+  }
 }
 </script>
 

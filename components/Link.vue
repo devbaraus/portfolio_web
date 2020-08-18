@@ -8,12 +8,13 @@ export default {
   props: {
     to: String,
   },
-  methods:{
-    goTo(e){
+  methods: {
+    goTo(e) {
       e.preventDefault()
+      this.$scrollTo('body', 0, { force: true })
       this.$router.push(this.to)
-    }
-  }
+    },
+  },
 }
 </script>
 

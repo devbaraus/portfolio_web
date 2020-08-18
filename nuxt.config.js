@@ -91,10 +91,7 @@ export default {
         id: 'UA-175567899-1',
       },
     ],
-    [
-      'vue-scrollto/nuxt',
-      { duration: 300, force: true, container: 'body', easing: 'ease-in' },
-    ],
+    'vue-scrollto/nuxt',
   ],
   /*
    ** Nuxt.js modules
