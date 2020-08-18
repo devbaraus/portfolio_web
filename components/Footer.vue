@@ -49,7 +49,6 @@
       <div class="footer-form">
         <form
           name="contact"
-          action=""
           method="POST"
           action="/form-success"
           data-netlify-recaptcha="true"
