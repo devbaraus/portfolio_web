@@ -9,10 +9,14 @@ export default {
     to: String,
   },
   methods: {
-    goTo(e) {
-      e.preventDefault()
-      let goTo = this.to.match(/(\#\w*)/g)
-      this.$scrollTo( goTo ? goTo[0] : 'body', 0, { force: true })
+    async goTo() {
+      // e.preventDefault()
+
+      (async () => {
+        let goTo = this.to.match(/(\#\w*)/g)
+        this.$scrollTo(goTo ? goTo[0] : 'body', 0, { force: true })
+      })()
+
       this.$router.push(this.to)
     },
   },
