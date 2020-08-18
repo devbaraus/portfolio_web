@@ -12,7 +12,8 @@ export default {
     goTo(e) {
       e.preventDefault()
       this.$router.push(this.to)
-      this.$scrollTo('body', 0, { force: true })
+      let goTo = this.to.match(/(\#\w*)/g)
+      this.$scrollTo( goTo.length > 0 ? goTo[0] : 'body', 0, { force: true })
     },
   },
 }
