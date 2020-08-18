@@ -49,37 +49,42 @@
       <div class="footer-form">
         <form
           name="contact"
+          action=""
           method="POST"
-          data-netlify-recaptcha
+          action="/form-success"
+          data-netlify-recaptcha="true"
           data-netlify="true"
         >
           <div class="form-grid">
+            <label for="name">
               <input
                 type="text"
                 name="name"
                 id="name"
-                required
                 placeholder="Nome completo"
               />
-            <input
-              type="email"
-              required
-              name="email"
-              id="email"
-              placeholder="E-mail"
-            />
-            <textarea
-              class="col-span-2"
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              required
-              placeholder="Mensagem"
-            ></textarea>
+            </label>
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <label for="message" class="col-span-2">
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Mensagem"
+              ></textarea>
+            </label>
           </div>
           <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
           <div class="form-flex flex items-center justify-end">
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
         </form>
