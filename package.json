@@ -20,7 +20,8 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-emoji": "^1.4.0",
     "nuxt": "^2.14.0",
-    "twemoji": "^13.0.1"
+    "twemoji": "^13.0.1",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",

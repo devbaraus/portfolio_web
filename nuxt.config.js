@@ -91,6 +91,10 @@ export default {
         id: 'UA-175567899-1',
       },
     ],
+    [
+      'vue-scrollto/nuxt',
+      { duration: 300, force: true, container: 'body', easing: 'ease-in' },
+    ],
   ],
   /*
    ** Nuxt.js modules
@@ -109,7 +113,7 @@ export default {
    */
   axios: {
     baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    // baseURL: 'http://192.168.15.43:3333/',
+    // baseURL: 'http://192.168.15.45:3333/',
   },
   /*
    ** Content module configuration

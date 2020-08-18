@@ -82,7 +82,7 @@
             </label>
           </div>
           <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
-          <div class="form-flex flex items-center justify-end">
+          <div class="form-flex flex items-center justify-between">
             <div data-netlify-recaptcha="true"></div>
             <button type="submit">Enviar</button>
           </div>
