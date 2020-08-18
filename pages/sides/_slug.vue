@@ -65,7 +65,7 @@ export default {
   name: 'slug',
   components: { ImageCarousel, Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
-    console.log(route.params.slug)
+    // console.log(route.params.slug)
     const side = (await $axios.get(`sides/${route.params.slug}`)).data
 
     app.head.title = `${side.name} | DevBaraus`

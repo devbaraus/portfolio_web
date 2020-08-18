@@ -12,7 +12,7 @@
             :key="link.url"
             @click="() => (open = !open)"
           >
-            <nuxt-link :to="link.url" tag="a">{{ link.label }}</nuxt-link>
+            <Link :to="link.url">{{ link.label }}</Link>
           </li>
         </ul>
       </nav>
@@ -21,12 +21,12 @@
       <nav
         class="py-2 flex justify-between items-center w-full container nav-desktop"
       >
-        <nuxt-link to="/" class="cursor-pointer logo">
+        <Link to="/" class="cursor-pointer logo">
           <!--          <Logo class="h-12 w-16 inline-block" />-->
           <h1 class="font-bold text-2xl align-middle inline-block">
             <span class="text-primary">Dev</span>Baraus
           </h1>
-        </nuxt-link>
+        </Link>
         <span class="block md:hidden" @click="() => (open = !open)">
           <Icon
             :name="`${open ? 'arrow-up' : 'arrow-down'}`"
@@ -35,11 +35,10 @@
         </span>
         <ul class="hidden list-reset md:flex">
           <li v-for="link in links" :key="link.url" :class="''">
-            <nuxt-link
+            <Link
               :to="link.url"
-              tag="a"
               :class="link.button && 'text-gray-light py-1 px-2 bg-dark'"
-              >{{ link.label }}</nuxt-link
+              >{{ link.label }}</Link
             >
           </li>
         </ul>
@@ -51,9 +50,11 @@
 <script>
 import Logo from '~/components/Logo'
 import Icon from '~/components/Icon'
+import Link from '@/components/Link'
 export default {
   name: 'index.vue',
   components: {
+    Link,
     Icon,
     Logo,
   },

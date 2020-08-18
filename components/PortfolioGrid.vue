@@ -9,14 +9,14 @@
           :alt="`${project.name} Cover`"
           class="portfolio-img"
         />
-        <nuxt-link
+        <Link
           :to="`/${level}/${project.id}`"
           class="portfolio-header-content cursor-pointer hover:opacity-75 transition-all duration-200 ease-in"
         >
           <p>
             {{ project.name }}
           </p>
-        </nuxt-link>
+        </Link>
       </div>
       <div class="portfolio-footer" v-if="project.labels.length > 0">
         <icon

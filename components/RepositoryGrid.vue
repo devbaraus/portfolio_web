@@ -3,7 +3,7 @@
     <article v-for="repo in repos" class="repo">
       <div class="repo-header">
         <div>
-          <nuxt-link :to="`/repo/${repo.name}`" tag="a">{{repo.name}}</nuxt-link>
+          <Link :to="`/repo/${repo.name}`" tag="a">{{repo.name}}</Link>
         </div>
         <div class="flex items-center justify-between">
           <a :href="repo.html_url" rel="noopener noreferrer" target="_blank"><i class="icon-external-link"></i></a>

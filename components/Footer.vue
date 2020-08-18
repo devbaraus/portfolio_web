@@ -25,21 +25,21 @@
           ><icon name="linkedin"></icon> linkedin:devbaraus</a
         >
         <a
-          href="https://instagram.com/devbaraus"
+          href="https://github.com/devbaraus"
           target="_blank"
           rel="noopener noreferrer"
           class="link"
           ><icon name="github"></icon> github:devbaraus</a
         >
         <a
-          href="https://instagram.com/devbaraus"
+          href="https://twitter.com/devbaraus"
           target="_blank"
           rel="noopener noreferrer"
           class="link"
           ><icon name="twitter"></icon> twitter:devbaraus</a
         >
         <a
-          href="app.rocketseat.com.br/me/devbaraus"
+          href="https://app.rocketseat.com.br/me/devbaraus"
           target="_blank"
           rel="noopener noreferrer"
           class="link"
@@ -54,7 +54,6 @@
           data-netlify="true"
         >
           <div class="form-grid">
-            <label for="name">
               <input
                 type="text"
                 name="name"
@@ -62,28 +61,24 @@
                 required
                 placeholder="Nome completo"
               />
-            </label>
-            <label for="email">
-              <input
-                type="email"
-                required
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
-            </label>
-            <label for="message" class="col-span-2">
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                required
-                placeholder="Mensagem"
-              ></textarea>
-            </label>
+            <input
+              type="email"
+              required
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <textarea
+              class="col-span-2"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+              placeholder="Mensagem"
+            ></textarea>
           </div>
-          <!--          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>-->
+          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
           <div class="form-flex flex items-center justify-end">
             <button type="submit">Enviar</button>
           </div>
