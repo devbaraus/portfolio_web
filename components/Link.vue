@@ -11,8 +11,8 @@ export default {
   methods: {
     goTo(e) {
       e.preventDefault()
-      let goTo = this.to.match(/(\#\w*)/g)
-      this.$scrollTo( goTo ? goTo[0] : 'body', 0, { force: true })
+      // let goTo = this.to.match(/(\#\w*)/g)
+      // this.$scrollTo( goTo ? goTo[0] : 'body', 0, { force: true })
       this.$router.push(this.to)
     },
   },
