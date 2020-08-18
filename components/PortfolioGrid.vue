@@ -10,7 +10,7 @@
           class="portfolio-img"
         />
         <Link
-          :to="`/${level}/${project.id}/`"
+          :to="`/${level}/${project.id}`"
           class="portfolio-header-content cursor-pointer hover:opacity-75 transition-all duration-200 ease-in"
         >
           <p>
