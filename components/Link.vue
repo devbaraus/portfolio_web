@@ -11,8 +11,8 @@ export default {
   methods: {
     goTo(e) {
       e.preventDefault()
-      this.$scrollTo('body', 0, { force: true })
       this.$router.push(this.to)
+      this.$scrollTo('body', 0, { force: true })
     },
   },
 }
