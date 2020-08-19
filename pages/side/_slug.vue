@@ -15,7 +15,7 @@
           <h1 class="text-3xl md:text-4xl">{{ side.name }}</h1>
         </div>
         <div :class="`mt-8 md:mt-0 ${
-            (project.url === null || project.url === '') && 'hidden'
+            (side.url === null || side.url === '') && 'hidden'
           }`">
           <Button icon="external-link" :link="side.url">Acessar projeto</Button>
         </div>
