@@ -66,7 +66,7 @@
           >
             <h6 class="text-3xl mb-8">Veja mais posts escritos por mim!</h6>
             <Button
-              link="https://dev.to/user/devbaraus"
+              link="https://dev.to/devbaraus"
               :dev="true"
               class="text-2xl border-1 border-gray-light hover:border-primary"
               icon="devto"
