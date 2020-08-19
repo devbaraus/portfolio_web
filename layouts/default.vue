@@ -65,6 +65,31 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
+.grid-suggestions {
+  grid-template-areas: 'sug1' 'sug2' 'ad';
+
+  & > div:nth-child(1) {
+    grid-area: sug1;
+  }
+  & > div:nth-child(2) {
+    grid-area: ad;
+  }
+  & > div:nth-child(3) {
+    grid-area: sug2;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid-suggestions {
+    grid-template-areas: 'sug1 sug2' 'ad ad';
+  }
+}
+@media (min-width: 1028px) {
+  .grid-suggestions {
+    grid-template-areas: 'sug1 ad sug2';
+  }
+}
+
 .container {
   @apply px-8 mx-auto;
 }

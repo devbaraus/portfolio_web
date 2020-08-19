@@ -36,15 +36,14 @@
       <section id="repo-suggestions" class="container">
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
-          <div v-for="(item, index) in suggestions">
+          <div v-for="(item, index) in suggestions" :key="index">
             <RepositoryCard
               class="h-full"
               v-if="index % 2 === 0"
               :repo="item"
             ></RepositoryCard>
             <div
-              class="flex justify-center flex-col md:col-start-3 items-center text-gray-light text-center px-4"
-              style="grid-column: 1 / 3;"
+              class="flex justify-center flex-col md:col-start-3 items-center text-gray-light text-center px-4 h-full"
               v-else
             >
               <h6 class="text-2xl mb-8">Veja meus outros repositórios</h6>
@@ -89,7 +88,7 @@ export default {
     suggestions =
       suggestions.length === 2
         ? [suggestions[0], , suggestions[1]]
-        : [...suggestions]
+        : [suggestions[0], null]
 
     return { repo, suggestions }
   },
@@ -131,28 +130,5 @@ section {
   }
 }
 
-.grid-suggestions {
-  grid-template-areas: 'sug1' 'sug2' 'ad';
 
-  & > div:nth-child(1) {
-    grid-area: sug1;
-  }
-  & > div:nth-child(2) {
-    grid-area: ad;
-  }
-  & > div:nth-child(3) {
-    grid-area: sug2;
-  }
-}
-
-@media (min-width: 600px) {
-  .grid-suggestions {
-    grid-template-areas: 'sug1 sug2' 'ad ad';
-  }
-}
-@media (min-width: 1028px) {
-  .grid-suggestions {
-    grid-template-areas: 'sug1 ad sug2';
-  }
-}
 </style>

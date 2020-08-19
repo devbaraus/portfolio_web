@@ -60,19 +60,22 @@
       <section id="article-suggestions" class="container">
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
-          <ArticleCard :article="suggestions[0]"></ArticleCard>
-          <div
-            class="flex justify-center flex-col items-center text-gray-light text-center px-4"
-          >
-            <h6 class="text-2xl mb-8">Veja mais posts escritos por mim!</h6>
-            <Button
-              link="https://dev.to/devbaraus"
-              :dev="true"
-              class="text-xl border-1 border-gray-light hover:border-primary"
-              icon="devto"
+          <div v-for="(item, index) in suggestions" :key="index">
+            <ArticleCard class="h-full" v-if="index % 2 === 0" :article="item"></ArticleCard>
+            <div
+              v-else
+              class="flex justify-center flex-col items-center text-gray-light text-center px-4 h-full"
             >
-              Acessar DEV
-            </Button>
+              <h6 class="text-2xl mb-8">Veja mais posts escritos por mim!</h6>
+              <Button
+                link="https://dev.to/devbaraus"
+                :dev="true"
+                class="text-xl border-1 border-gray-light hover:border-primary"
+                icon="devto"
+              >
+                Acessar DEV
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -98,10 +101,18 @@ export default {
     app.head.description = `Artigo postado no dev.to ${article.title}.`
 
     let suggestions = await (
-      await $axios.get('suggest/articles', { params: { id: article.id, suggestions: 2} })
+      await $axios.get('suggest/articles', {
+        params: { id: article.id, suggestions: 2 },
+      })
     ).data
 
-    return { article, suggestions: [suggestions[0], ,suggestions[1]] }
+    suggestions =
+      suggestions.length === 2
+        ? [suggestions[0], ,suggestions[1]]
+        : [suggestions[0], null]
+
+
+    return { article, suggestions }
   },
   mounted() {
     this.$refs.page.querySelectorAll('.image-open-modal').forEach((el) => {

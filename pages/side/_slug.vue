@@ -68,21 +68,21 @@
       <section id="repo-suggestions" class="container">
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
-          <div v-for="(item, index) in suggestions">
+          <div v-for="(item, index) in suggestions" :key="index">
             <ProjectCard
               v-if="index % 2 === 0"
               :project="item"
               level="side"
+              class="h-full"
             ></ProjectCard>
             <div
-              class="flex justify-center flex-col items-center text-gray-light text-center px-4"
+              class="flex justify-center flex-col items-center text-gray-light text-center px-4 h-full"
               v-else
             >
               <h6 class="text-2xl mb-8">
                 Novos projetos serão adicionados em breve!
               </h6>
             </div>
-
           </div>
         </div>
       </section>
@@ -102,11 +102,11 @@ export default {
   components: { ProjectCard, Link, ImageCarousel, Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
     // console.log(route.params.slug)
-    const side = (await $axios.get(`sides/${route.params.slug}`)).data
+    const side = await (await $axios.get(`sides/${route.params.slug}`)).data
 
+    console.log(side)
     app.head.title = `${side.name} | DevBaraus`
     app.head.description = `Projeto pessoal ${side.name}.`
-
     let suggestions = await (
       await $axios.get('suggest/sides', {
         params: { id: side.id, suggestions: 2 },
@@ -116,9 +116,9 @@ export default {
     suggestions =
       suggestions.length === 2
         ? [suggestions[0], , suggestions[1]]
-        : [...suggestions]
+        : [suggestions[0], null]
 
-    return { side, suggestions: [suggestions[0], , suggestions[1]] }
+    return { side, suggestions }
   },
 }
 </script>

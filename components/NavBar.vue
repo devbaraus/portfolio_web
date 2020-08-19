@@ -79,6 +79,10 @@ export default {
         label: 'Habilidades',
       },
       {
+        url: '/#articles',
+        label: 'Artigos',
+      },
+      {
         url: '/#side-projects',
         label: 'Projetos',
       },
@@ -90,10 +94,7 @@ export default {
         url: '/#repos',
         label: 'Repositórios',
       },
-      {
-        url: '/#articles',
-        label: 'Artigos',
-      },
+
       {
         url: '/#contact',
         button: true,
