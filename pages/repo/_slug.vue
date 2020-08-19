@@ -48,7 +48,7 @@
             >
               <h6 class="text-2xl mb-8">Veja meus outros repositórios</h6>
               <Button
-                link="https://dev.to/user/devbaraus"
+                link="https://github.com/devbaraus"
                 :dev="true"
                 class="text-xl border-1 border-gray-light hover:border-primary"
                 icon="github"
