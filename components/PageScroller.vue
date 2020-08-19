@@ -1,7 +1,7 @@
 <template>
   <div style="bottom: 6rem; right: 2rem;" class="fixed hidden lg:block">
     <div
-      class="h-full bg-dark text-gray-light flex items-center justify-center flex-col py-1 px-2"
+      class="h-full bg-dark text-gray-light flex items-center justify-center flex-col"
     >
       <span @click="scrollUp"> <Icon name="chevron-up" /> </span>
       <span @click="scrollDown"> <Icon name="chevron-down" /> </span>
@@ -25,8 +25,11 @@ export default {
 }
 </script>
 
-<style scoped>
-i {
-  @apply cursor-pointer p-2;
+<style lang="scss" scoped>
+span {
+  @apply cursor-pointer py-2 px-3 transition-all duration-200 ease-in;
+  &:hover {
+    @apply bg-light;
+  }
 }
 </style>

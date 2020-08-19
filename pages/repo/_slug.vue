@@ -20,7 +20,9 @@
             ></Icon>
           </div>
         </div>
-        <div class="mt-8 md:mt-0">
+        <div :class="`mt-8 md:mt-0 ${
+            (repo.url === null || repo.url === '') && 'hidden'
+          }`">
           <Button icon="external-link" :link="repo.url"
             >Acessar repositório</Button
           >

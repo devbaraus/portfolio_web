@@ -83,7 +83,7 @@ export default {
         label: 'Artigos',
       },
       {
-        url: '/#side-projects',
+        url: '/#projects',
         label: 'Projetos',
       },
       // {

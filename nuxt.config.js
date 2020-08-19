@@ -113,8 +113,8 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    // baseURL: 'http://192.168.15.45:3333/',
+    // baseURL: 'https://portfolio-serverapi.herokuapp.com/',
+    baseURL: 'http://192.168.15.45:3333/',
   },
   /*
    ** Content module configuration

@@ -28,10 +28,7 @@
           icon="rocketseat"
           >Rocketseat</Button
         >
-        <Button
-          link="https://dev.to/devbaraus"
-          :dev="true"
-          icon="devto"
+        <Button link="https://dev.to/devbaraus" :dev="true" icon="devto"
           >DEV</Button
         >
         <Button
@@ -81,6 +78,8 @@ export default {
     store.commit('articles', await (await $axios.get('articles')).data)
     //
     store.commit('sides', await (await $axios.get('sides')).data)
+
+    store.commit('projects', await (await $axios.get('projects')).data)
     //
   },
   computed: {

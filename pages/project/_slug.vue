@@ -1,63 +1,65 @@
 <template>
-  <div>
+  <div ref="page">
     <div class="bg-gray-light text-dark pb-8">
-      <div id="side-banner" class="bg-dark h-48">
-        <div class="container flex items-center h-full">
+      <div id="project-banner" class="bg-dark h-48">
+        <div class="container-fluid flex items-center h-full">
           <img
-            :src="side.cover"
-            :alt="`${side.name} logotipo`"
-            class="container object-contain h-32"
+            :src="project.cover"
+            alt="Banner artigo"
+            class="object-cover h-full w-full image-open-modal"
           />
         </div>
       </div>
-      <div id="side-header" class="container md:flex pt-4 pb-8">
+      <div id="project-header" class="container md:flex pt-4 pb-8">
         <div>
-          <h1 class="text-3xl md:text-4xl">{{ side.name }}</h1>
+          <h1 class="text-3xl md:text-4xl">{{ project.name }}</h1>
         </div>
-        <div :class="`mt-8 md:mt-0 ${
+        <div
+          :class="`mt-8 md:mt-0 ${
             (project.url === null || project.url === '') && 'hidden'
-          }`">
-          <Button icon="external-link" :link="side.url">Acessar projeto</Button>
+          }`"
+        >
+          <Button icon="external-link" :link="project.url"
+            >Acessar projeto</Button
+          >
         </div>
       </div>
       <div class="container flex flex-wrap md:flex-no-wrap gap-4">
         <markdown
-          id="side-content-readme"
-          :content="side.description"
+          id="project-content-readme"
+          :content="project.description"
           class="md:w-8/12"
         ></markdown>
-        <div id="side-sidebar" class="md:w-4/12 pt-4">
-          <ImageCarousel :images="side.images"></ImageCarousel>
+        <div id="project-projectbar" class="md:w-4/12 pt-4">
+          <ImageCarousel :images="project.images"></ImageCarousel>
           <hr class="bg-dark my-4" />
           <div
-            v-if="side.labels.length > 0"
+            v-if="project.labels.length > 0"
             class="flex justify-center items-center"
           >
             <Icon
-              v-for="lang in side.labels"
+              v-for="lang in project.labels"
               :key="lang"
               :name="lang"
               :dev="true"
               class="text-2xl"
             ></Icon>
           </div>
-          <div :class="`mt-4 ${
-            (side.url === null || side.url === '') && 'hidden'
-          }`">
+          <div class="mt-4">
             <a
-              :href="side.url"
+              :href="project.url"
               target="_blank"
               rel="noopener noreferrer"
               class="link"
-              >{{ side.url }}</a
+              >{{ project.url }}</a
             >
           </div>
           <div
-            v-if="side.contents.length > 0"
+            v-if="project.contents.length > 0"
             class="flex justify-start flex-wrap items-center mt-4"
           >
             <Button
-              v-for="content in side.contents"
+              v-for="content in project.contents"
               :key="content.url"
               icon="download"
               class="text-sm px-1"
@@ -76,7 +78,7 @@
             <ProjectCard
               v-if="index % 2 === 0"
               :project="item"
-              level="side"
+              level="project"
               class="h-full"
             ></ProjectCard>
             <div
@@ -106,14 +108,15 @@ export default {
   components: { ProjectCard, Link, ImageCarousel, Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
     // console.log(route.params.slug)
-    const side = await (await $axios.get(`sides/${route.params.slug}`)).data
+    const project = await (await $axios.get(`projects/${route.params.slug}`))
+      .data
 
-    console.log(side)
-    app.head.title = `${side.name} | DevBaraus`
-    app.head.description = `Projeto pessoal ${side.name}.`
+    console.log(project)
+    app.head.title = `${project.name} | DevBaraus`
+    app.head.description = `Projeto ${project.name}.`
     let suggestions = await (
-      await $axios.get('suggest/sides', {
-        params: { id: side.id, suggestions: 2 },
+      await $axios.get('suggest/projects', {
+        params: { id: project.id, suggestions: 2 },
       })
     ).data
 
@@ -122,13 +125,23 @@ export default {
         ? [suggestions[0], , suggestions[1]]
         : [suggestions[0], null]
 
-    return { side, suggestions }
+    return { project, suggestions }
+  },
+  mounted() {
+    this.$refs.page.querySelectorAll('.image-open-modal').forEach((el) => {
+      el.addEventListener('click', () => {
+        this.$store.commit('imageModal', {
+          name: el.getAttribute('alt'),
+          url: el.getAttribute('src'),
+        })
+      })
+    })
   },
 }
 </script>
 
 <style lang="scss" scoped>
-#side-header {
+#project-header {
   @apply justify-between items-baseline;
   h1 {
     @apply font-bold;
