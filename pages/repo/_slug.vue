@@ -36,19 +36,27 @@
       <section id="repo-suggestions" class="container">
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
-          <RepositoryCard :repo="suggestions[0]"></RepositoryCard>
-          <div
-            class="flex justify-center flex-col items-center text-gray-light text-center"
-          >
-            <h6 class="text-3xl mb-8">Veja meus outros repositórios</h6>
-            <Button
-              link="https://dev.to/user/devbaraus"
-              :dev="true"
-              class="text-2xl border-1 border-gray-light hover:border-primary"
-              icon="github"
+          <div v-for="(item, index) in suggestions">
+            <RepositoryCard
+              class="h-full"
+              v-if="index % 2 === 0"
+              :repo="item"
+            ></RepositoryCard>
+            <div
+              class="flex justify-center flex-col md:col-start-3 items-center text-gray-light text-center px-4"
+              style="grid-column: 1 / 3;"
+              v-else
             >
-              Acessar GitHub
-            </Button>
+              <h6 class="text-2xl mb-8">Veja meus outros repositórios</h6>
+              <Button
+                link="https://dev.to/user/devbaraus"
+                :dev="true"
+                class="text-xl border-1 border-gray-light hover:border-primary"
+                icon="github"
+              >
+                Acessar GitHub
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -67,13 +75,21 @@ export default {
   components: { RepositoryCard, Markdown, Button, Icon },
   async asyncData({ route, $axios, app, store }) {
     // console.log(context)
-    const repo = (await $axios.get(`repos/${route.params.slug}`)).data
+    const repo = await (await $axios.get(`repos/${route.params.slug}`)).data
 
     app.head.title = `${repo.name} | DevBaraus`
     app.head.description = `Repositório ${repo.name} no GitHub.`
-    const suggestions = await (await $axios.get('repos')).data.filter(
-      (item) => item.name !== repo.name,
-    )
+
+    let suggestions = await (
+      await $axios.get('suggest/repos', {
+        params: { repo: repo.name, suggestions: 2 },
+      })
+    ).data
+
+    suggestions =
+      suggestions.length === 2
+        ? [suggestions[0], , suggestions[1]]
+        : [...suggestions]
 
     return { repo, suggestions }
   },
@@ -115,4 +131,28 @@ section {
   }
 }
 
+.grid-suggestions {
+  grid-template-areas: 'sug1' 'sug2' 'ad';
+
+  & > div:nth-child(1) {
+    grid-area: sug1;
+  }
+  & > div:nth-child(2) {
+    grid-area: ad;
+  }
+  & > div:nth-child(3) {
+    grid-area: sug2;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid-suggestions {
+    grid-template-areas: 'sug1 sug2' 'ad ad';
+  }
+}
+@media (min-width: 1028px) {
+  .grid-suggestions {
+    grid-template-areas: 'sug1 ad sug2';
+  }
+}
 </style>

@@ -56,6 +56,9 @@ export default {
       @apply text-xl cursor-pointer;
     }
   }
+  .repo-body {
+    @apply h-full;
+  }
   .repo-footer {
     @apply flex h-16 items-center;
     i {

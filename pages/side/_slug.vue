@@ -68,13 +68,21 @@
       <section id="repo-suggestions" class="container">
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
-          <ProjectCard :project="suggestions[0]" level="side"></ProjectCard>
-          <div
-            class="flex justify-center flex-col items-center text-gray-light text-center"
-          >
-            <h6 class="text-3xl mb-8">
-              Novos projetos serão adicionados em breve!
-            </h6>
+          <div v-for="(item, index) in suggestions">
+            <ProjectCard
+              v-if="index % 2 === 0"
+              :project="item"
+              level="side"
+            ></ProjectCard>
+            <div
+              class="flex justify-center flex-col items-center text-gray-light text-center px-4"
+              v-else
+            >
+              <h6 class="text-2xl mb-8">
+                Novos projetos serão adicionados em breve!
+              </h6>
+            </div>
+
           </div>
         </div>
       </section>
@@ -99,10 +107,18 @@ export default {
     app.head.title = `${side.name} | DevBaraus`
     app.head.description = `Projeto pessoal ${side.name}.`
 
-    const suggestions = await (await $axios.get('sides')).data.filter(
-      (item) => item.id !== side.id,
-    )
-    return { side, suggestions }
+    let suggestions = await (
+      await $axios.get('suggest/sides', {
+        params: { id: side.id, suggestions: 2 },
+      })
+    ).data
+
+    suggestions =
+      suggestions.length === 2
+        ? [suggestions[0], , suggestions[1]]
+        : [...suggestions]
+
+    return { side, suggestions: [suggestions[0], , suggestions[1]] }
   },
 }
 </script>

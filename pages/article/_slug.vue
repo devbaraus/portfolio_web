@@ -2,7 +2,7 @@
   <div class="bg-gray-light text-dark">
     <div class="pb-8" ref="page">
       <div id="article-banner" class="bg-dark h-64">
-        <div class="container flex items-center h-full">
+        <div class="container-fluid flex items-center h-full">
           <img
             :src="article.cover"
             alt="Banner artigo"
@@ -62,13 +62,13 @@
         <div class="card-grid grid-suggestions">
           <ArticleCard :article="suggestions[0]"></ArticleCard>
           <div
-            class="flex justify-center flex-col items-center text-gray-light text-center"
+            class="flex justify-center flex-col items-center text-gray-light text-center px-4"
           >
-            <h6 class="text-3xl mb-8">Veja mais posts escritos por mim!</h6>
+            <h6 class="text-2xl mb-8">Veja mais posts escritos por mim!</h6>
             <Button
               link="https://dev.to/devbaraus"
               :dev="true"
-              class="text-2xl border-1 border-gray-light hover:border-primary"
+              class="text-xl border-1 border-gray-light hover:border-primary"
               icon="devto"
             >
               Acessar DEV
@@ -97,13 +97,11 @@ export default {
     app.head.title = `${article.title} | DevBaraus`
     app.head.description = `Artigo postado no dev.to ${article.title}.`
 
-    let suggestions = await (await $axios.get('articles')).data.filter(
-      (item) => {
-        return Number(item.id) !== Number(article.id)
-      },
-    )
+    let suggestions = await (
+      await $axios.get('suggest/articles', { params: { id: article.id, suggestions: 2} })
+    ).data
 
-    return { article, suggestions }
+    return { article, suggestions: [suggestions[0], ,suggestions[1]] }
   },
   mounted() {
     this.$refs.page.querySelectorAll('.image-open-modal').forEach((el) => {
