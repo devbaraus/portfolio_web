@@ -43,7 +43,7 @@
       </div>
     </section>
     <section class="container skill-set-section">
-      <h5 id="skill">Habilidades</h5>
+      <h5 id="skills">Habilidades</h5>
       <skills-grid />
     </section>
     <section :class="`container ${articles.length < 1 && 'hidden'}`">
