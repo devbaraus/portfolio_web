@@ -3,20 +3,63 @@
     <header>
       <Jumbo />
     </header>
+    <section class="container social-media-section">
+      <div
+        class="flex items-center justify-between gap-2 col-gap-3 mt-8 flex-wrap"
+      >
+        <Button text="GitHub" link="https://github.com/devbaraus" icon="github"
+          >GitHub</Button
+        >
+        <Button
+          text="Instagram"
+          link="https://instagram.com/devbaraus"
+          icon="instagram"
+          >Instagram</Button
+        >
+        <Button link="https://linkedin.com/in/devbaraus" icon="linkedin"
+          >Linkedin</Button
+        >
+        <Button link="https://twitter.com/devbaraus" icon="twitter"
+          >Twitter</Button
+        >
+        <Button
+          link="https://app.rocketseat.com.br/me/devbaraus"
+          :dev="true"
+          icon="rocketseat"
+          >Rocketseat</Button
+        >
+        <Button
+          link="https://dev.to/devbaraus"
+          :dev="true"
+          icon="devto"
+          >DEV</Button
+        >
+        <Button
+          link="https://profile.codersrank.io/user/devbaraus"
+          :dev="true"
+          icon="codersrank"
+          >CodersRank</Button
+        >
+      </div>
+    </section>
     <section class="container skill-set-section">
       <h5 id="skill">Habilidades</h5>
       <skills-grid />
     </section>
+    <section :class="`container ${articles.length < 1 && 'hidden'}`">
+      <h5 id="articles">Artigos</h5>
+      <article-grid :articles="articles" />
+    </section>
     <section :class="`container ${projects.length < 1 && 'hidden'}`">
       <h5 id="projects">Projetos</h5>
-      <portfolio-grid :projects="projects" level="projects" />
+      <project-grid :projects="projects" level="project" />
     </section>
     <section :class="`container ${sides.length < 1 && 'hidden'}`">
       <h5 id="side-projects">Projetos pessoais</h5>
-      <portfolio-grid :projects="sides" level="sides" />
+      <project-grid :projects="sides" level="side" />
     </section>
     <section :class="`container ${repos.length < 1 && 'hidden'}`">
-      <h5 id="repo">Repositórios</h5>
+      <h5 id="repos">Repositórios</h5>
       <repository-grid :repos="repos" />
     </section>
   </div>
@@ -25,16 +68,17 @@
 <script>
 import Jumbo from '~/components/Jumbo'
 import SkillsGrid from '~/components/SkillsGrid'
-import RepositoryGrid from '~/components/RepositoryGrid'
-import PortfolioGrid from '~/components/PortfolioGrid'
+import RepositoryGrid from '~/components/Repo/RepositoryGrid'
+import ArticleGrid from '~/components/Article/ArticleGrid'
+import ProjectGrid from '~/components/Project/ProjectGrid'
 
 export default {
   scrollToTop: true,
-  components: { PortfolioGrid, RepositoryGrid, SkillsGrid, Jumbo },
+  components: { ProjectGrid, RepositoryGrid, SkillsGrid, Jumbo, ArticleGrid },
   async asyncData({ $axios, store }) {
     store.commit('repos', await (await $axios.get('repos')).data)
 
-    // projects = await (await app.$axios.get( 'projects')).data
+    store.commit('articles', await (await $axios.get('articles')).data)
     //
     store.commit('sides', await (await $axios.get('sides')).data)
     //

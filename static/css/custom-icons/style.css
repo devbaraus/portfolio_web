@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'custom';
-  src:  url('fonts/custom.eot?hirr1w');
-  src:  url('fonts/custom.eot?hirr1w#iefix') format('embedded-opentype'),
-    url('fonts/custom.ttf?hirr1w') format('truetype'),
-    url('fonts/custom.woff?hirr1w') format('woff'),
-    url('fonts/custom.svg?hirr1w#custom') format('svg');
+  src:  url('fonts/custom.eot?tfe9jy');
+  src:  url('fonts/custom.eot?tfe9jy#iefix') format('embedded-opentype'),
+    url('fonts/custom.ttf?tfe9jy') format('truetype'),
+    url('fonts/custom.woff?tfe9jy') format('woff'),
+    url('fonts/custom.svg?tfe9jy#custom') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,26 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicon-codersrank-plain:before {
+  content: "\e900";
+}
+.devicon-devto-plain:before {
+  content: "\e90a";
+}
+.devicon-open-source-plain:before {
+  content: "\e90b";
+}
 .devicon-netlify-plain:before {
   content: "\e908";
-}
-.devicon-netlify-wordmark:before {
-  content: "\e909";
 }
 .devicon-spotify-plain:before {
   content: "\e906";
 }
-.devicon-spotify-wordmark:before {
-  content: "\e907";
-}
 .devicon-kotlin-plain:before {
   content: "\e904";
-}
-.devicon-kotlin-wordmark:before {
-  content: "\e905";
-}
-.devicon-tailwindcss-wordmark:before {
-  content: "\e900";
 }
 .devicon-tailwindcss-plain:before {
   content: "\e901";
@@ -52,12 +49,6 @@
 .devicon-rocketseat-plain:before {
   content: "\e902";
 }
-.devicon-rocketseat-wordmark:before {
-  content: "\e903";
-}
 .devicon-nuxtjs-plain:before {
   content: "\ea23";
-}
-.devicon-nuxtjs-wordmark:before {
-  content: "\ea1a";
 }

@@ -1,5 +1,5 @@
 <template>
-  <a :href="to" target="_top" @click="goTo"><slot></slot></a>
+  <a :href="to" target="_self" @click.prevent="goTo"><slot></slot></a>
 </template>
 
 <script>
@@ -10,8 +10,6 @@ export default {
   },
   methods: {
     async goTo() {
-      // e.preventDefault()
-
       (async () => {
         let goTo = this.to.match(/(\#\w*)/g)
         this.$scrollTo(goTo ? goTo[0] : 'body', 0, { force: true })

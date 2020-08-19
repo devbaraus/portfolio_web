@@ -1,29 +1,15 @@
 <template>
-  <div class="repo-grid">
-    <article v-for="repo in repos" class="repo">
-      <div class="repo-header">
-        <div>
-          <Link :to="`/repo/${repo.name}`" tag="a">{{repo.name}}</Link>
-        </div>
-        <div class="flex items-center justify-between">
-          <a :href="repo.html_url" rel="noopener noreferrer" target="_blank"><i class="icon-external-link"></i></a>
-        </div>
-      </div>
-      <div class="repo-body">
-        {{repo.description}}
-      </div>
-      <div class="repo-footer" v-if="repo.languages.length > 0">
-        <icon v-for="lang in repo.languages" :key="lang" :dev="true" :name="lang" class="repo-badge"/>
-      </div>
-    </article>
+  <div class="card-grid">
+    <RepositoryCard v-for="repo in repos" :key="repo.id" :repo="repo" />
   </div>
 </template>
 
 <script>
-import { langToIcon } from '~/utils'
+import RepositoryCard from './RepositoryCard'
 
 export default {
   name: 'RepositoryGrid',
+  components: { RepositoryCard },
   props: {
     repos: Array,
   },

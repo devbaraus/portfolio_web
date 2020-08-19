@@ -64,6 +64,10 @@ export default {
         href: '/css/custom-icons/style.css',
       },
     ],
+    script: [
+      // { src: 'https://profile.codersrank.io/widget/widget.js', body: true },
+      // { src: 'https://unpkg.com/github-card@1.2.1/dist/widget.js', body: true },
+    ],
   },
   /*
    ** Global CSS
@@ -91,10 +95,7 @@ export default {
         id: 'UA-175567899-1',
       },
     ],
-    [
-      'vue-scrollto/nuxt',
-      { duration: 300, force: true, container: 'body', easing: 'linear' },
-    ],
+    ['vue-scrollto/nuxt', { duration: 200, force: true, easing: 'linear' }],
   ],
   /*
    ** Nuxt.js modules
@@ -112,8 +113,8 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    // baseURL: 'http://192.168.15.45:3333/',
+    // baseURL: 'https://portfolio-serverapi.herokuapp.com/',
+    baseURL: 'http://192.168.15.45:3333/',
   },
   /*
    ** Content module configuration

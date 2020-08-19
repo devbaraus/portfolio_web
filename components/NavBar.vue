@@ -16,6 +16,15 @@
           </li>
         </ul>
       </nav>
+
+      <div class="mt-4">
+        <span @click="scrollUp">
+          <Icon name="chevron-up" class="p-2 text-3xl"></Icon>
+        </span>
+        <span @click="scrollDown">
+          <Icon name="chevron-down" class="p-2 text-3xl" />
+        </span>
+      </div>
     </div>
     <div class="fixed bg-gray-light w-screen z-20">
       <nav
@@ -27,13 +36,13 @@
             <span class="text-primary">Dev</span>Baraus
           </h1>
         </Link>
-        <span class="block md:hidden" @click="() => (open = !open)">
+        <span class="block lg:hidden" @click="() => (open = !open)">
           <Icon
             :name="`${open ? 'arrow-up' : 'arrow-down'}`"
             class="text-2xl"
           ></Icon>
         </span>
-        <ul class="hidden list-reset md:flex">
+        <ul class="hidden list-reset lg:flex">
           <li v-for="link in links" :key="link.url" :class="''">
             <Link
               :to="link.url"
@@ -66,7 +75,7 @@ export default {
         label: 'Home',
       },
       {
-        url: '/#skill',
+        url: '/#skills',
         label: 'Habilidades',
       },
       {
@@ -78,13 +87,13 @@ export default {
       //   label: 'Pessoais',
       // },
       {
-        url: '/#repo',
+        url: '/#repos',
         label: 'Repositórios',
       },
-      // {
-      //   url: '/#blog',
-      //   label: 'Blog',
-      // },
+      {
+        url: '/#articles',
+        label: 'Artigos',
+      },
       {
         url: '/#contact',
         button: true,
@@ -92,6 +101,19 @@ export default {
       },
     ],
   }),
+  methods: {
+    closeNav() {
+      this.open = false
+    },
+    scrollDown() {
+      this.closeNav()
+      this.$scrollTo('footer', 0, { force: true })
+    },
+    scrollUp() {
+      this.closeNav()
+      this.$scrollTo('body', 0, { force: true })
+    },
+  },
 }
 </script>
 
@@ -122,13 +144,13 @@ nav {
 }
 
 .nav-mobile {
-  @apply flex items-center justify-center transition-all duration-200 ease-in;
+  @apply flex items-center flex-col justify-center transition-all duration-200 ease-in;
   bottom: 100%;
   &.nav-mobile-active {
     bottom: 0;
   }
   nav {
-    @apply h-full flex items-center justify-center;
+    @apply flex items-center justify-center;
     ul {
       @apply flex flex-col justify-between;
 

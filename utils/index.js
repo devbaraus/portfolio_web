@@ -1,9 +1,12 @@
 export function langToIcon(name) {
-  if (name === 'HTML') return 'html5'
-  if (name === 'CSS') return 'css3'
-  if (name === 'C++') return 'cplusplus'
-  if (name === 'Vue') return 'vuejs'
-  return name.toLowerCase().replace(' ', '-')
+  name = name.toLowerCase()
+  if (name === 'html') return 'html5'
+  if (name === 'nuxt') return 'nuxtjs'
+  if (name === 'node') return 'nodejs'
+  if (name === 'css') return 'css3'
+  if (name === 'c++') return 'cplusplus'
+  if (name === 'vue') return 'vuejs'
+  return name.replace(' ', '-')
   // if (name === 'html') return 'html5'
   // if (name === 'html') return 'html5'
   // if (name === 'html') return 'html5'

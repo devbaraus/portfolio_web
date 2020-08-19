@@ -1,8 +1,10 @@
 <template>
   <div>
+    <img src="/logo.svg" class="hidden" alt="Logo Devbaraus" />
     <ImageModal></ImageModal>
+    <PageScroller/>
     <TopBar />
-    <div class="pt-12">
+    <div class="pt-12" ref="listener">
       <Nuxt />
     </div>
     <Footer />
@@ -13,17 +15,24 @@
 import TopBar from '~/components/NavBar'
 import Footer from '~/components/Footer'
 import ImageModal from '@/components/ImageModal'
+import PageScroller from '@/components/PageScroller'
 export default {
   scrollToTop: true,
   components: {
+    PageScroller,
     ImageModal,
     Footer,
     TopBar,
   },
+  mounted() {
+    this.$refs.listener.addEventListener('scroll', () => {
+      console.log('ok')
+    })
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
 :root {
   --color-gray-light: #f0f0f7;
   --color-dark: #31263e;
@@ -51,6 +60,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.card-grid{
+  @apply grid mt-4 col-gap-4 row-gap-8;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
 .container {
   @apply px-8 mx-auto;
 }
@@ -75,6 +89,13 @@ a.link:hover {
     rgba(238, 86, 34, 0.8)
   );
   background-position: 0 100%;
+}
+
+.image-open-modal {
+  @apply cursor-pointer transition-all duration-200 ease-in;
+  &:hover {
+    @apply opacity-75;
+  }
 }
 
 @media (min-width: 1280px) {

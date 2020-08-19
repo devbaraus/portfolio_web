@@ -11,40 +11,46 @@
           ><icon name="mail"></icon> contato@baraus.dev
         </a>
         <a
-          href="https://instagram.com/devbaraus"
-          target="_blank"
+          href="tel:+5562991205888"
           rel="noopener noreferrer"
           class="link"
-          ><icon name="instagram"></icon> instagram:devbaraus</a
-        >
-        <a
-          href="https://linkedin.com/in/devbaraus"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="link"
-          ><icon name="linkedin"></icon> linkedin:devbaraus</a
-        >
-        <a
-          href="https://github.com/devbaraus"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="link"
-          ><icon name="github"></icon> github:devbaraus</a
-        >
-        <a
-          href="https://twitter.com/devbaraus"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="link"
-          ><icon name="twitter"></icon> twitter:devbaraus</a
-        >
-        <a
-          href="https://app.rocketseat.com.br/me/devbaraus"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="link"
-          ><icon name="rocketseat" :dev="true"></icon> rocketseat:devbaraus</a
-        >
+        ><icon name="phone"></icon> (62) 9 9120-6888
+        </a>
+<!--        <a-->
+<!--          href="https://instagram.com/devbaraus"-->
+<!--          target="_blank"-->
+<!--          rel="noopener noreferrer"-->
+<!--          class="link"-->
+<!--          ><icon name="instagram"></icon> instagram:devbaraus</a-->
+<!--        >-->
+<!--        <a-->
+<!--          href="https://linkedin.com/in/devbaraus"-->
+<!--          target="_blank"-->
+<!--          rel="noopener noreferrer"-->
+<!--          class="link"-->
+<!--          ><icon name="linkedin"></icon> linkedin:devbaraus</a-->
+<!--        >-->
+<!--        <a-->
+<!--          href="https://github.com/devbaraus"-->
+<!--          target="_blank"-->
+<!--          rel="noopener noreferrer"-->
+<!--          class="link"-->
+<!--          ><icon name="github"></icon> github:devbaraus</a-->
+<!--        >-->
+<!--        <a-->
+<!--          href="https://twitter.com/devbaraus"-->
+<!--          target="_blank"-->
+<!--          rel="noopener noreferrer"-->
+<!--          class="link"-->
+<!--          ><icon name="twitter"></icon> twitter:devbaraus</a-->
+<!--        >-->
+<!--        <a-->
+<!--          href="https://app.rocketseat.com.br/me/devbaraus"-->
+<!--          target="_blank"-->
+<!--          rel="noopener noreferrer"-->
+<!--          class="link"-->
+<!--          ><icon name="rocketseat" :dev="true"></icon> rocketseat:devbaraus</a-->
+<!--        >-->
       </div>
       <div class="footer-form">
         <form
