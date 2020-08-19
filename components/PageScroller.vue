@@ -1,5 +1,5 @@
 <template>
-  <div style="bottom: 6rem; right: 2rem;" class="fixed hidden lg:block">
+  <div style="bottom: 6rem; right: 2rem; z-index: 99999;" class="fixed hidden lg:block">
     <div
       class="h-full bg-dark text-gray-light flex items-center justify-center flex-col"
     >
