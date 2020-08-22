@@ -8,7 +8,7 @@ package = "@netlify/plugin-sitemap"
   buildDir = "dist"
 
 [build]
-publish = "public"
+publish = "dist"
 
 [[plugins]]
 package = "netlify-plugin-submit-sitemap"
