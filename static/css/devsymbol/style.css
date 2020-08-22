@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devsymbol';
-  src:  url('fonts/devsymbol.eot?q76fmg');
-  src:  url('fonts/devsymbol.eot?q76fmg#iefix') format('embedded-opentype'),
-    url('fonts/devsymbol.ttf?q76fmg') format('truetype'),
-    url('fonts/devsymbol.woff?q76fmg') format('woff'),
-    url('fonts/devsymbol.svg?q76fmg#devsymbol') format('svg');
+  src:  url('fonts/devsymbol.eot?azqzx8');
+  src:  url('fonts/devsymbol.eot?azqzx8#iefix') format('embedded-opentype'),
+    url('fonts/devsymbol.ttf?azqzx8') format('truetype'),
+    url('fonts/devsymbol.woff?azqzx8') format('woff'),
+    url('fonts/devsymbol.svg?azqzx8#devsymbol') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ds-devto:before {
+  content: "\e910";
+}
 .ds-prettier:before {
   content: "\e900";
 }
@@ -78,9 +81,6 @@
 }
 .ds-cplusplus:before {
   content: "\e90e";
-}
-.ds-devto:before {
-  content: "\e910";
 }
 .ds-express:before {
   content: "\e911";
