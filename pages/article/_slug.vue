@@ -101,7 +101,7 @@ export default {
       .data
 
     app.head.title = `${article.title} | DevBaraus`
-    app.head.description = `Artigo postado no dev.to ${article.title}.`
+    app.head.description = `Artigo postado em DEV.to | ${article.title}.`
 
     let suggestions = await (
       await $axios.get('suggest/articles', {

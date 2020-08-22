@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'devsymbol';
+  src:  url('fonts/devsymbol.eot?q76fmg');
+  src:  url('fonts/devsymbol.eot?q76fmg#iefix') format('embedded-opentype'),
+    url('fonts/devsymbol.ttf?q76fmg') format('truetype'),
+    url('fonts/devsymbol.woff?q76fmg') format('woff'),
+    url('fonts/devsymbol.svg?q76fmg#devsymbol') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ds-"], [class*=" ds-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'devsymbol' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ds-prettier:before {
+  content: "\e900";
+}
+.ds-vuejs:before {
+  content: "\e937";
+}
+.ds-css3:before {
+  content: "\e90f";
+}
+.ds-html5:before {
+  content: "\e91a";
+}
+.ds-typescript:before {
+  content: "\e901";
+}
+.ds-mongodb:before {
+  content: "\e902";
+}
+.ds-javascript:before {
+  content: "\e903";
+}
+.ds-gitlab:before {
+  content: "\e904";
+}
+.ds-docker:before {
+  content: "\e905";
+}
+.ds-django:before {
+  content: "\e906";
+}
+.ds-insomnia:before {
+  content: "\e907";
+}
+.ds-arduino:before {
+  content: "\e908";
+}
+.ds-behance:before {
+  content: "\e909";
+}
+.ds-bootstrap:before {
+  content: "\e90a";
+}
+.ds-c:before {
+  content: "\e90b";
+}
+.ds-codepen:before {
+  content: "\e90c";
+}
+.ds-codersrank:before {
+  content: "\e90d";
+}
+.ds-cplusplus:before {
+  content: "\e90e";
+}
+.ds-devto:before {
+  content: "\e910";
+}
+.ds-express:before {
+  content: "\e911";
+}
+.ds-figma:before {
+  content: "\e912";
+}
+.ds-firebase:before {
+  content: "\e913";
+}
+.ds-git:before {
+  content: "\e914";
+}
+.ds-github:before {
+  content: "\e915";
+}
+.ds-gitpod:before {
+  content: "\e916";
+}
+.ds-googlecloud:before {
+  content: "\e917";
+}
+.ds-graphql:before {
+  content: "\e918";
+}
+.ds-heroku:before {
+  content: "\e919";
+}
+.ds-kotlin:before {
+  content: "\e91b";
+}
+.ds-linkedin:before {
+  content: "\e91c";
+}
+.ds-markdown:before {
+  content: "\e91d";
+}
+.ds-netlify:before {
+  content: "\e91e";
+}
+.ds-nginx:before {
+  content: "\e91f";
+}
+.ds-nodejs:before {
+  content: "\e920";
+}
+.ds-npm:before {
+  content: "\e921";
+}
+.ds-nuxtjs:before {
+  content: "\e922";
+}
+.ds-opensource:before {
+  content: "\e923";
+}
+.ds-php:before {
+  content: "\e924";
+}
+.ds-postgresql:before {
+  content: "\e925";
+}
+.ds-python:before {
+  content: "\e926";
+}
+.ds-rails:before {
+  content: "\e927";
+}
+.ds-react:before {
+  content: "\e928";
+}
+.ds-rocketseat:before {
+  content: "\e929";
+}
+.ds-slack .path1:before {
+  content: "\e92a";
+  color: ;
+}
+.ds-slack .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path4:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path5:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path6:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path7:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: ;
+}
+.ds-slack .path8:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: ;
+}
+.ds-sqlite:before {
+  content: "\e932";
+}
+.ds-tailwindcss:before {
+  content: "\e933";
+}
+.ds-trello:before {
+  content: "\e934";
+}
+.ds-ubuntu:before {
+  content: "\e935";
+}
+.ds-vscode:before {
+  content: "\e936";
+}
+.ds-windows:before {
+  content: "\e938";
+}
+.ds-yarn:before {
+  content: "\e939";
+}
+.ds-yii:before {
+  content: "\e93a";
+}

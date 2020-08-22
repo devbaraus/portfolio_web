@@ -16,7 +16,6 @@ export default {
   pwa: {
     manifest,
   },
-
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -45,7 +44,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
@@ -53,15 +51,11 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: '/css/devicons/devicon.min.css',
+        href: '/css/devsymbol/style.css',
       },
       {
         rel: 'stylesheet',
         href: '/css/feather-icons/style.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: '/css/custom-icons/style.css',
       },
     ],
     script: [
@@ -114,7 +108,7 @@ export default {
    */
   axios: {
     baseURL: 'https://portfolio-serverapi.herokuapp.com/',
-    // baseURL: 'http://192.168.15.45:3333/',
+    // baseURL: 'http://localhost:3333/',
   },
   /*
    ** Content module configuration

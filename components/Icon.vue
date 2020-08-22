@@ -3,7 +3,7 @@
     :title="title && name"
     :class="`${
       dev
-        ? `devicon-${getName()}-${wordmark ? 'wordmark' : ['express'].includes(getName()) ? 'original' : 'plain'}`
+        ? `ds-${getName()}`
         : `icon-${getName()}`
     }`"
   ></i>
@@ -17,10 +17,6 @@ export default {
   props: {
     name: '',
     dev: {
-      type: Boolean,
-      default: false,
-    },
-    wordmark: {
       type: Boolean,
       default: false,
     },
