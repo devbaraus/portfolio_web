@@ -4,13 +4,13 @@
       <div id="repo-header" class="container md:flex pb-8">
         <div>
           <h1 class="text-3xl md:text-4xl">{{ repo.name }}</h1>
-          <p>
-            {{ repo.description }}
-          </p>
+          <div class="markdown" v-html="renderMD(repo.description)"></div>
           <div
             v-if="repo.languages.length > 0"
             class="languages h-16 flex justify-start items-center"
           >
+            <p class="text-xl">{{ repo.stargazers }} <Icon name="star" /></p>
+            <span class="mx-2">|</span>
             <Icon
               v-for="lang in repo.languages"
               :key="lang"
@@ -20,9 +20,14 @@
             ></Icon>
           </div>
         </div>
-        <div :class="`mt-8 md:mt-0 ${
-            (repo.url === null || repo.url === '') && 'hidden'
-          }`">
+        <div
+          :class="`mt-8 md:mt-0 ${
+            (repo.url === null ||
+              repo.url === '' ||
+              typeof repo.url === 'undefined') &&
+            'hidden'
+          }`"
+        >
           <Button icon="external-link" :link="repo.url"
             >Acessar repositório</Button
           >
@@ -69,6 +74,7 @@
 import Icon from '@/components/Icon'
 import Button from '@/components/Button'
 import Markdown from '@/components/Markdown'
+import md from '@/utils/markdown'
 import RepositoryCard from '@/components/Repo/RepositoryCard'
 export default {
   scrollToTop: true,
@@ -93,6 +99,11 @@ export default {
         : [suggestions[0], null]
 
     return { repo, suggestions }
+  },
+  methods: {
+    renderMD(data) {
+      return md.render(data)
+    },
   },
   mounted() {
     this.$refs.page.querySelectorAll('.image-open-modal').forEach((el) => {
@@ -131,6 +142,4 @@ section {
     }
   }
 }
-
-
 </style>

@@ -14,9 +14,11 @@
         <div>
           <h1 class="text-3xl md:text-4xl">{{ side.name }}</h1>
         </div>
-        <div :class="`mt-8 md:mt-0 ${
+        <div
+          :class="`mt-8 md:mt-0 ${
             (side.url === null || side.url === '') && 'hidden'
-          }`">
+          }`"
+        >
           <Button icon="external-link" :link="side.url">Acessar projeto</Button>
         </div>
       </div>
@@ -41,9 +43,14 @@
               class="text-2xl"
             ></Icon>
           </div>
-          <div :class="`mt-4 ${
-            (side.url === null || side.url === '') && 'hidden'
-          }`">
+          <div
+            :class="`mt-4 ${
+              (side.url === null ||
+                side.url === '' ||
+                typeof side.url === 'undefined') &&
+              'hidden'
+            }`"
+          >
             <a
               :href="side.url"
               target="_blank"
@@ -105,10 +112,8 @@ export default {
   name: 'slug',
   components: { ProjectCard, Link, ImageCarousel, Markdown, Button, Icon },
   async asyncData({ route, $axios, app }) {
-    // console.log(route.params.slug)
     const side = await (await $axios.get(`sides/${route.params.slug}`)).data
 
-    console.log(side)
     app.head.title = `${side.name} | DevBaraus`
     app.head.description = `Projeto pessoal ${side.name}.`
     let suggestions = await (

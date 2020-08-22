@@ -58,6 +58,9 @@ $primary-80: rgba(238, 86, 34, 0.8);
   }
   p {
     @apply text-base my-2 text-justify;
+    &[align="center"]{
+      text-align: center !important;
+    }
   }
   img {
     @apply max-w-full mx-auto mb-4 inline;
@@ -72,11 +75,12 @@ $primary-80: rgba(238, 86, 34, 0.8);
     border-left: solid var(--color-primary);
     @apply pl-4 text-justify w-full;
   }
+
   code {
-    @apply p-3 shadow bg-light text-white max-w-full block rounded overflow-x-auto;
+    @apply inline break-words p-0 px-1 shadow bg-light text-white max-w-full rounded overflow-x-auto;
   }
-  p code {
-    @apply inline break-words p-0 px-1;
+  pre code {
+    @apply p-3 block;
   }
   pre code.css,
   pre code.html,

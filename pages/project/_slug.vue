@@ -16,7 +16,10 @@
         </div>
         <div
           :class="`mt-8 md:mt-0 ${
-            (project.url === null || project.url === '') && 'hidden'
+            (project.url === null ||
+              project.url === '' ||
+              typeof project.url === 'undefined') &&
+            'hidden'
           }`"
         >
           <Button icon="external-link" :link="project.url"
@@ -111,7 +114,6 @@ export default {
     const project = await (await $axios.get(`projects/${route.params.slug}`))
       .data
 
-    console.log(project)
     app.head.title = `${project.name} | DevBaraus`
     app.head.description = `Projeto ${project.name}.`
     let suggestions = await (

@@ -10,8 +10,7 @@
         ></a>
       </div>
     </div>
-    <div class="repo-body">
-      {{ repo.description }}
+    <div class="repo-body markdown" v-html="renderMD(repo.description || '')">
     </div>
     <div class="repo-footer" v-if="repo.languages.length > 0">
       <icon
@@ -26,10 +25,17 @@
 </template>
 
 <script>
+import markdown from '@/utils/markdown'
+
 export default {
   name: 'RepositoryCard',
   props: {
     repo: Object,
+  },
+  methods: {
+    renderMD(data) {
+      return markdown.render(data)
+    },
   },
 }
 </script>

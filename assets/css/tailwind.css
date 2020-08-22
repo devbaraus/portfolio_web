@@ -163,6 +163,9 @@
 .markdown p {
   @apply text-base my-2 text-justify;
 }
+.markdown p[align=center] {
+  text-align: center !important;
+}
 .markdown img {
   @apply max-w-full mx-auto mb-4 inline;
 }
@@ -177,10 +180,10 @@
   @apply pl-4 text-justify w-full;
 }
 .markdown code {
-  @apply p-3 shadow bg-light text-white max-w-full block rounded overflow-x-auto;
+  @apply inline break-words p-0 px-1 shadow bg-light text-white max-w-full rounded overflow-x-auto;
 }
-.markdown p code {
-  @apply inline break-words p-0 px-1;
+.markdown pre code {
+  @apply p-3 block;
 }
 .markdown pre code.css,
 .markdown pre code.html,

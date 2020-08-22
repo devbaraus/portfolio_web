@@ -26,7 +26,7 @@
         </span>
       </div>
     </div>
-    <div class="fixed bg-gray-light w-screen z-20">
+    <div class="absolute bg-gray-light w-screen z-20">
       <nav
         class="py-2 flex justify-between items-center w-full container nav-desktop"
       >

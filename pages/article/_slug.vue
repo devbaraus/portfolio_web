@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div class="bg-gray-light text-dark">
     <div class="pb-8" ref="page">
@@ -45,7 +46,7 @@
           </div>
         </div>
         <div :class="`mt-8 md:mt-0 ${
-            (article.url === null || article.url === '') && 'hidden'
+            (article.url === null || article.url === '' || typeof article.url === 'undefined') && 'hidden'
           }`">
           <Button icon="devto" :dev="true" :link="article.url"
             >Acessar artigo</Button
