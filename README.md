@@ -2,6 +2,12 @@
 <img src="https://raw.githubusercontent.com/devbaraus/portfolio_web/master/static/logo.svg" alt="" width="128" style="margin: 0 auto;">
 </p>
 
+<p align="center">
+    <a href="https://app.netlify.com/sites/devbaraus/deploys">
+        <img title="Netlify Status" src="https://api.netlify.com/api/v1/badges/1f7e2e0c-d846-4e5a-bed6-efc2b28fd45f/deploy-status">
+    </a>
+</p>
+
 > :goat: My personal website/portfolio!
 
 ## Table of contents
@@ -35,8 +41,8 @@ It will always be a work in progress, so a lot of things may change.
 
 # How does it work
 
-I didn't whant to always depend on an API so I used a recent feature of NuxtJS that makes my whole website in a static website. 
+I didn't want to always depend on an API to have content on a page everytime a person accessed my website so I used a recent feature of NuxtJS that makes my whole website in a static website. 
 
 It does not update it's content automatically but I also don't make new content very often and when I do just need to rebuild the front end and <span>\`voilà\`<span> the all pages are new.
 
-So the only need to back end is when it's in development or when the website is built.
+So the only need to back end is when it's in development or when the website is built,
