@@ -32,6 +32,7 @@ export default {
           'transition-all',
           'duration-200',
           'ease-in',
+          'lazyload'
         ].map((c) => {
           el.classList.add(c)
         })

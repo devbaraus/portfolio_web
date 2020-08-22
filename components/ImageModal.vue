@@ -6,7 +6,7 @@
     } transition-all duration-500 fixed w-screen h-screen flex items-center justify-center z-50`"
   >
     <figure class="z-50 flex justify-between flex-col">
-      <img :src="imageModal.url" :alt="imageModal.name" />
+      <img :src="imageModal.url" :alt="imageModal.name" class="lazyload"/>
       <figcaption class="text-center mt-2 text-xl text-gray-light">
         {{ imageModal.name }}
       </figcaption>

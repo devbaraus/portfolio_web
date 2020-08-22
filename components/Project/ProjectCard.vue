@@ -5,7 +5,7 @@
         <img
           :src="project.cover"
           :alt="`${project.name} Cover`"
-          class="project-img cursor-pointer hover:opacity-75 transition-all duration-200 ease-in"
+          class="project-img cursor-pointer hover:opacity-75 transition-all duration-200 ease-in lazyload"
         />
       </Link>
       <Link

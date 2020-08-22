@@ -100,6 +100,7 @@
         <img
           src="https://api.netlify.com/api/v1/badges/1f7e2e0c-d846-4e5a-bed6-efc2b28fd45f/deploy-status"
           alt="Netlify Status"
+          class="lazyload"
         />
       </a>
       <p class="text-xs pb-4 text-center">

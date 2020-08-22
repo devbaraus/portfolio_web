@@ -59,6 +59,7 @@ export default {
       },
     ],
     script: [
+      { src: '/js/lazysizes.min.js', body: false },
       // { src: 'https://profile.codersrank.io/widget/widget.js', body: true },
       // { src: 'https://unpkg.com/github-card@1.2.1/dist/widget.js', body: true },
     ],

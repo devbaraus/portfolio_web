@@ -5,7 +5,7 @@
         <img
           :src="article.cover"
           :alt="`${article.title} Cover`"
-          class="article-img cursor-pointer hover:opacity-75 transition-all duration-200 ease-in"
+          class="article-img cursor-pointer hover:opacity-75 transition-all duration-200 ease-in lazyload"
         />
       </Link>
       <Link
