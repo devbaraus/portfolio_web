@@ -84,9 +84,6 @@ export default {
     // console.log(context)
     const repo = await (await $axios.get(`repos/${route.params.slug}`)).data
 
-    app.head.title = `${repo.name} | DevBaraus`
-    app.head.description = `Repositório do GitHub | ${repo.name}.`
-
     let suggestions = await (
       await $axios.get('suggest/repos', {
         params: { repo: repo.name, suggestions: 2 },

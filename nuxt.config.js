@@ -1,7 +1,9 @@
 const manifest = {
-  name: 'Portfólio DevBaraus',
+  name: 'DevBaraus | Desenvolvedor Web Full Stack',
   short_name: 'DevBaraus',
-  description: 'Meu nome é Bruno de Araújo Alves e este é meu portfólio.',
+  description: `Sou Bruno de Araújo Alves, tenho ${
+    new Date().getFullYear() - 1999
+  } anos, estudante de Ciência da Computação. Sou Desenvolvedor Web Full Stack, tenho experiência em NodeJS, VueJS, Python entre outras linguagens e frameworks.`,
   lang: 'pt-BR',
   display: 'standalone',
   background_color: '#f0f0f7',

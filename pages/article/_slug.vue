@@ -100,9 +100,6 @@ export default {
     const article = await (await $axios.get(`articles/${route.params.slug}`))
       .data
 
-    app.head.title = `${article.title} | DevBaraus`
-    app.head.description = `Artigo postado em DEV.to | ${article.title}.`
-
     let suggestions = await (
       await $axios.get('suggest/articles', {
         params: { id: article.id, suggestions: 2 },

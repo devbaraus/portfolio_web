@@ -114,8 +114,6 @@ export default {
     const project = await (await $axios.get(`projects/${route.params.slug}`))
       .data
 
-    app.head.title = `${project.name} | DevBaraus`
-    app.head.description = `Projeto ${project.name}.`
     let suggestions = await (
       await $axios.get('suggest/projects', {
         params: { id: project.id, suggestions: 2 },

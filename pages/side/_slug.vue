@@ -114,8 +114,6 @@ export default {
   async asyncData({ route, $axios, app }) {
     const side = await (await $axios.get(`sides/${route.params.slug}`)).data
 
-    app.head.title = `${side.name} | DevBaraus`
-    app.head.description = `Projeto pessoal ${side.name}.`
     let suggestions = await (
       await $axios.get('suggest/sides', {
         params: { id: side.id, suggestions: 2 },

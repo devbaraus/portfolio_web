@@ -11,7 +11,7 @@
             este é meu portfólio.
           </h3>
           <h4 class="text-base text-justify">
-            Tenho 21 anos, estudante de
+            Tenho {{new Date().getFullYear() - 1999}} anos, estudante de
             <span class="text-primary">Ciência da Computação</span> e aqui é
             onde compartilho um pouco do meu conhecimento. Sou
             <span class="text-primary">Desenvolvedor Web Full Stack</span>,

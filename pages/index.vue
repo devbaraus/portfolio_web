@@ -70,10 +70,6 @@ import ArticleGrid from '~/components/Article/ArticleGrid'
 import ProjectGrid from '~/components/Project/ProjectGrid'
 
 export default {
-  head: {
-    title: 'Portfólio DevBaraus'
-  },
-  scrollToTop: true,
   components: { ProjectGrid, RepositoryGrid, SkillsGrid, Jumbo, ArticleGrid },
   async asyncData({ $axios, store }) {
     store.commit('repos', await (await $axios.get('repos')).data)
