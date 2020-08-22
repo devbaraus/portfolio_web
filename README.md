@@ -2,12 +2,6 @@
 <img src="https://raw.githubusercontent.com/devbaraus/portfolio_web/master/static/logo.svg" alt="" width="128" style="margin: 0 auto;">
 </p>
 
-<p align="center">
-    <a href="https://app.netlify.com/sites/devbaraus/deploys">
-        <img title="Netlify Status" src="https://api.netlify.com/api/v1/badges/1f7e2e0c-d846-4e5a-bed6-efc2b28fd45f/deploy-status">
-    </a>
-</p>
-
 > :goat: My personal website/portfolio!
 
 ## Table of contents
