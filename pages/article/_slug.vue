@@ -11,9 +11,9 @@
           />
         </div>
       </div>
-      <div id="article-header" class="container md:flex pt-4 pb-8">
+      <div id="article-header" class="container lg:flex pt-4 pb-8">
         <div>
-          <h1 class="text-3xl md:text-4xl">{{ article.title }}</h1>
+          <h1 class="text-3xl lg:text-4xl">{{ article.title }}</h1>
           <div>
             <span
               class="article-reactions"
@@ -45,7 +45,7 @@
             ></Icon>
           </div>
         </div>
-        <div :class="`mt-8 md:mt-0 ${
+        <div :class="`mt-8 lg:mt-0 ${
             (article.url === null || article.url === '' || typeof article.url === 'undefined') && 'hidden'
           }`">
           <Button icon="devto" :dev="true" :link="article.url"

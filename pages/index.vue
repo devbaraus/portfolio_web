@@ -79,7 +79,6 @@ export default {
     store.commit('sides', await (await $axios.get('sides')).data)
 
     store.commit('projects', await (await $axios.get('projects')).data)
-    //
   },
   computed: {
     repos() {

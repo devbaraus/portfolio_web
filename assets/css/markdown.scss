@@ -80,8 +80,10 @@ $primary-80: rgba(238, 86, 34, 0.8);
     @apply inline break-words p-0 px-1 shadow bg-light text-white max-w-full rounded overflow-x-auto;
   }
   pre code {
-    @apply p-3 block;
+    @apply pt-4 pb-3 px-3 block;
   }
+  pre code.bash,
+  pre code.sh,
   pre code.css,
   pre code.html,
   pre code.js,
@@ -98,6 +100,8 @@ $primary-80: rgba(238, 86, 34, 0.8);
   pre code.py {
     @apply relative pt-8;
   }
+  pre code.bash:after,
+  pre code.sh:after,
   pre code.css:after,
   pre code.html:after,
   pre code.js:after,
@@ -111,8 +115,31 @@ $primary-80: rgba(238, 86, 34, 0.8);
   pre code.kt:after,
   pre code.python:after,
   pre code.py:after {
-    @apply p-1 absolute bg-primary-light overflow-hidden;
+    @apply p-1 absolute bg-primary overflow-hidden;
     top: -1px;
+    left: 2rem;
+  }
+
+  pre code.bash:before,
+  pre code.sh:before,
+  pre code.css:before,
+  pre code.html:before,
+  pre code.js:before,
+  pre code.javascript:before,
+  pre code.ts:before,
+  pre code.typescript:before,
+  pre code.md:before,
+  pre code.markdown:before,
+  pre code.php:before,
+  pre code.kotlin:before,
+  pre code.kt:before,
+  pre code.python:before,
+  pre code.py:before {
+    @apply p-1 absolute bg-primary overflow-hidden;
+    top: -1px;
+    right: 2rem;
+    font-family: 'icomoon';
+    content: '\e938';
   }
 
   pre code.css:after {
@@ -140,6 +167,11 @@ $primary-80: rgba(238, 86, 34, 0.8);
   pre code.php:after {
     content: 'php';
   }
+  pre code.bash:after,
+  pre code.sh:after {
+    content: 'bash';
+  }
+
   pre code::-webkit-scrollbar {
     width: 8px;
     height: 8px;

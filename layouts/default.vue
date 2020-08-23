@@ -2,6 +2,7 @@
   <div>
     <img src="/logo.svg" class="hidden" alt="Logo Devbaraus" />
     <ImageModal></ImageModal>
+    <flash-message></flash-message>
     <PageScroller/>
     <TopBar />
     <div class="pt-12" ref="listener">
@@ -16,9 +17,11 @@ import TopBar from '~/components/NavBar'
 import Footer from '~/components/Footer'
 import ImageModal from '@/components/ImageModal'
 import PageScroller from '@/components/PageScroller'
+import FlashMessage from "@/components/FlashMessage";
 export default {
   scrollToTop: true,
   components: {
+    FlashMessage,
     PageScroller,
     ImageModal,
     Footer,

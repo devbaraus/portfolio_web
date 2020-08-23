@@ -5,7 +5,7 @@
         <Link :to="`/repo/${repo.name}`" tag="a">{{ repo.name }}</Link>
       </div>
       <div class="flex items-center justify-between">
-        <a :href="repo.html_url" rel="noopener noreferrer" target="_blank"
+        <a :href="repo.url" rel="noopener noreferrer" target="_blank"
           ><i class="icon-external-link"></i
         ></a>
       </div>
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     renderMD(data) {
-      return markdown.render(data)
+      return markdown.makeHtml(data)
     },
   },
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -183,8 +184,10 @@
   @apply inline break-words p-0 px-1 shadow bg-light text-white max-w-full rounded overflow-x-auto;
 }
 .markdown pre code {
-  @apply p-3 block;
+  @apply pt-4 pb-3 px-3 block;
 }
+.markdown pre code.bash,
+.markdown pre code.sh,
 .markdown pre code.css,
 .markdown pre code.html,
 .markdown pre code.js,
@@ -201,6 +204,8 @@
 .markdown pre code.py {
   @apply relative pt-8;
 }
+.markdown pre code.bash:after,
+.markdown pre code.sh:after,
 .markdown pre code.css:after,
 .markdown pre code.html:after,
 .markdown pre code.js:after,
@@ -214,8 +219,30 @@
 .markdown pre code.kt:after,
 .markdown pre code.python:after,
 .markdown pre code.py:after {
-  @apply p-1 absolute bg-primary-light overflow-hidden;
+  @apply p-1 absolute bg-primary overflow-hidden;
   top: -1px;
+  left: 2rem;
+}
+.markdown pre code.bash:before,
+.markdown pre code.sh:before,
+.markdown pre code.css:before,
+.markdown pre code.html:before,
+.markdown pre code.js:before,
+.markdown pre code.javascript:before,
+.markdown pre code.ts:before,
+.markdown pre code.typescript:before,
+.markdown pre code.md:before,
+.markdown pre code.markdown:before,
+.markdown pre code.php:before,
+.markdown pre code.kotlin:before,
+.markdown pre code.kt:before,
+.markdown pre code.python:before,
+.markdown pre code.py:before {
+  @apply p-1 absolute bg-primary overflow-hidden;
+  top: -1px;
+  right: 2rem;
+  font-family: "icomoon";
+  content: "";
 }
 .markdown pre code.css:after {
   content: "css";
@@ -241,6 +268,10 @@
 }
 .markdown pre code.php:after {
   content: "php";
+}
+.markdown pre code.bash:after,
+.markdown pre code.sh:after {
+  content: "bash";
 }
 .markdown pre code::-webkit-scrollbar {
   width: 8px;

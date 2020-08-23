@@ -1,61 +1,21 @@
-import MarkdownIt from 'markdown-it'
-import markdownAnchor from 'markdown-it-anchor'
-import markdownAttrs from 'markdown-it-attrs'
-import highlight from 'highlight.js'
-import markdownEmoji from 'markdown-it-emoji'
-import twemoji from 'twemoji'
+import showdown from 'showdown'
+import showdownHighlight from 'showdown-highlight'
 
-const markdown = new MarkdownIt({
-  html: true, // Enable HTML tags in source
-  xhtmlOut: false, // Use '/' to close single tags (<br />).
-  // This is only for full CommonMark compatibility.
-  breaks: false, // Convert '\n' in paragraphs into <br>
-  langPrefix: '', // CSS language prefix for fenced blocks. Can be
-  // useful for external highlighters.
-  linkify: true, // Autoconvert URL-like text to links
-
-  // Enable some language-neutral replacement + quotes beautification
-  typographer: true,
-
-  // Double + single quotes replacement pairs, when typographer enabled,
-  // and smartquotes on. Could be either a String or an Array.
-  //
-  // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
-  // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
-  quotes: '“”‘’',
-
-  // Highlighter function. Should return escaped HTML,
-  // or '' if the source string is not changed and should be escaped externally.
-  // If result starts with <pre... internal wrapper is skipped.
-  highlight: function (str, lang) {
-    if (lang && highlight.getLanguage(lang)) {
-      try {
-        return (
-          `<pre class="hljs"><code class="${lang}">` +
-          highlight.highlight(lang, str, true).value +
-          '</code></pre>'
-        )
-      } catch (__) {}
-    }
-
-    return (
-      '<pre class="hljs"><code>' +
-      markdown.utils.escapeHtml(str) +
-      '</code></pre>'
-    )
-  },
+const markdown = new showdown.Converter({
+  omitExtraWLInCodeBlocks: true,
+  ghCompatibleHeaderId: true,
+  simplifiedAutoLink: true,
+  strikethrough: true,
+  tables: true,
+  ghCodeBlocks: true,
+  smartIndentationFix: true,
+  simpleLineBreaks: true,
+  ghMentions: true,
+  encodeEmails: true,
+  openLinksInNewWindow: true,
+  emoji: true,
+  literalMidWordUnderscores: true,
+  extensions: [showdownHighlight],
 })
-  .use(markdownAnchor)
-  .use(markdownEmoji)
-  .use(markdownAttrs, {
-    // optional, these are default options
-    leftDelimiter: '{',
-    rightDelimiter: '}',
-    allowedAttributes: [], // empty array = all attributes are allowed
-  })
-
-markdown.renderer.rules.emoji = function (token, idx) {
-  return twemoji.parse(token[idx].content)
-}
 
 export default markdown
