@@ -99,7 +99,7 @@ export default {
   },
   methods: {
     renderMD(data) {
-      return md.render(data)
+      return md.makeHtml(data)
     },
   },
   mounted() {
