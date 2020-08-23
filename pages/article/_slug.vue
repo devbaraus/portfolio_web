@@ -1,4 +1,3 @@
-<!--suppress ALL -->
 <template>
   <div class="bg-gray-light text-dark">
     <div class="pb-8" ref="page">
