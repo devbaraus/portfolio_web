@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://baraus.dev/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/article/435647/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/article/435646/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/project/5f3846880b92d4697c2c39c1/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/project/5f38536e5f55ff8391f0e63a/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/project/5f3875d44da3e7655c05b755/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/project/5f3875f08420925c973d0980/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/side/5f386e9dca726866b2d1d06e/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/side/5f38702b1a639d46a4997a7e/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/portfolio_web/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/post_server_node/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/portfolio_api/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/proffy_server/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/proffy_web/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baraus.dev/repo/lattes_cliente/</loc>
+  <lastmod>2020-08-23T23:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
