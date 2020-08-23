@@ -58,8 +58,8 @@ export default {
     },
   },
   mounted() {
-    this.copyClipboard()
-    this.openImageModal()
+    // this.copyClipboard()
+    // this.openImageModal()
   }
 }
 </script>
