@@ -52,48 +52,48 @@
 <!--          ><icon name="rocketseat" :dev="true"></icon> rocketseat:devbaraus</a-->
 <!--        >-->
       </div>
-      <div class="footer-form">
-        <form
-          name="contact"
-          method="POST"
-          action="/form-success/"
-          data-netlify-recaptcha="true"
-          data-netlify="true"
-        >
-          <div class="form-grid">
-            <label for="name">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nome completo"
-              />
-            </label>
-            <label for="email">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
-            </label>
-            <label for="message" class="col-span-2">
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Mensagem"
-              ></textarea>
-            </label>
-          </div>
-          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>
-          <div class="form-flex flex items-center justify-between">
-            <div data-netlify-recaptcha="true"></div>
-            <button type="submit">Enviar</button>
-          </div>
-        </form>
-      </div>
+<!--      <div class="footer-form">-->
+<!--        <form-->
+<!--          name="contact"-->
+<!--          method="POST"-->
+<!--          action="/form-success/"-->
+<!--          data-netlify-recaptcha="true"-->
+<!--          data-netlify="true"-->
+<!--        >-->
+<!--          <div class="form-grid">-->
+<!--            <label for="name">-->
+<!--              <input-->
+<!--                type="text"-->
+<!--                name="name"-->
+<!--                id="name"-->
+<!--                placeholder="Nome completo"-->
+<!--              />-->
+<!--            </label>-->
+<!--            <label for="email">-->
+<!--              <input-->
+<!--                type="email"-->
+<!--                name="email"-->
+<!--                id="email"-->
+<!--                placeholder="E-mail"-->
+<!--              />-->
+<!--            </label>-->
+<!--            <label for="message" class="col-span-2">-->
+<!--              <textarea-->
+<!--                name="message"-->
+<!--                id="message"-->
+<!--                cols="30"-->
+<!--                rows="10"-->
+<!--                placeholder="Mensagem"-->
+<!--              ></textarea>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <span class="text-xs">Por favor, responda o reCAPTCHA abaixo.</span>-->
+<!--          <div class="form-flex flex items-center justify-between">-->
+<!--            <div data-netlify-recaptcha="true"></div>-->
+<!--            <button type="submit">Enviar</button>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--      </div>-->
     </div>
     <div class="container flex flex-col">
       <a href="https://app.netlify.com/sites/devbaraus/deploys">
