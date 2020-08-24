@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DevBaraus</string>
+    <string name="title_activity_main">DevBaraus</string>
+    <string name="package_name">portfolio.baraus.dev</string>
+    <string name="custom_url_scheme">portfolio.baraus.dev</string>
+</resources>

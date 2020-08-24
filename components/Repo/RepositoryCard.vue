@@ -2,7 +2,9 @@
   <article class="repo">
     <div class="repo-header">
       <div>
-        <Link :to="`/repo/${repo.name}`" tag="a">{{ repo.name }}</Link>
+        <Link :to="`/repo/${repo.name}`" tag="a">
+          {{ repo.name }}
+        </Link>
       </div>
       <div class="flex items-center justify-between">
         <a :href="repo.url" rel="noopener noreferrer" target="_blank"

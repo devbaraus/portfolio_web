@@ -1,0 +1,14 @@
+{
+  "appId": "portfolio.baraus.dev",
+  "appName": "portifolio_web",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "dist",
+  "windowsAndroidStudioPath": "C:\\Users\\barau\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\193.6626763\\bin\\studio64.exe",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

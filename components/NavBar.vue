@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      :class="`fixed nav-mobile h-screen w-screen bg-gray-light z-10 ${
+      :class="`fixed nav-mobile h-screen w-screen bg-gray-light z-10 pt-16 ${
         open && 'nav-mobile-active'
       }`"
     >
@@ -12,7 +12,11 @@
             :key="link.url"
             @click="() => (open = !open)"
           >
-            <Link :to="link.url">{{ link.label }}</Link>
+            <Link
+              :to="link.url"
+              :class="link.button && 'text-gray-light py-1 px-2 bg-dark'"
+            >{{ link.label }}</Link
+            >
           </li>
         </ul>
       </nav>
@@ -26,7 +30,7 @@
         </span>
       </div>
     </div>
-    <div class="absolute bg-gray-light w-screen z-20">
+    <div class="fixed bg-gray-light w-screen z-20">
       <nav
         class="py-2 flex justify-between items-center w-full container nav-desktop"
       >

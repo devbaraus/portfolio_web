@@ -1,12 +1,6 @@
 [[plugins]]
 package = "netlify-plugin-checklinks"
 
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "dist"
-
 [build]
 publish = "dist"
 

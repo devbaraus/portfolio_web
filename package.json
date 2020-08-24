@@ -5,12 +5,16 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "android": "nuxt generate && cap copy",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "tailwind:build": "tailwind build assets/css/tailwind.css -o assets/css/tailwind.core.css",
-    "sass:watch": "sass --watch assets/css/tailwind.scss assets/css/tailwind.css"
+    "tailwind": "tailwind build assets/css/tailwind.css -o assets/css/tailwind.core.css",
+    "sass": "sass --watch assets/css/tailwind.scss assets/css/tailwind.css"
   },
   "dependencies": {
+    "@capacitor/android": "2.4.0",
+    "@capacitor/cli": "^2.4.0",
+    "@capacitor/core": "^2.4.0",
     "@nuxt/content": "^1.5.0",
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
