@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="bg-gray-light text-dark py-8" ref="page">
-      <div id="repo-header" class="container md:flex pb-8">
+      <div id="repo-header" class="container lg:flex pb-8">
         <div>
-          <h1 class="text-3xl md:text-4xl">{{ repo.name }}</h1>
+          <h1 class="text-3xl lg:text-4xl">{{ repo.name }}</h1>
           <div class="markdown" v-html="renderMD(repo.description)"></div>
           <div
             v-if="repo.languages.length > 0"
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div
-          :class="`mt-8 md:mt-0 ${
+          :class="`mt-8 lg:mt-0 ${
             (repo.url === null ||
               repo.url === '' ||
               typeof repo.url === 'undefined') &&
@@ -50,7 +50,7 @@
               :repo="item"
             ></RepositoryCard>
             <div
-              class="flex justify-center flex-col md:col-start-3 items-center text-gray-light text-center px-4 h-full"
+              class="flex justify-center flex-col lg:col-start-3 items-center text-gray-light text-center px-4 h-full"
               v-else
             >
               <h6 class="text-2xl mb-8">Veja meus outros repositórios</h6>

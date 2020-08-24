@@ -2,18 +2,18 @@
   <div class="bg-gray-light text-dark">
     <div class="pb-8" ref="page">
       <div id="article-banner" class="bg-dark h-64">
-        <div class="container-fluid flex items-center h-full">
+        <div class="container-fluid flex items-center justify-center h-full">
           <img
             :src="article.cover"
             alt="Banner artigo"
-            class="object-cover h-full w-full image-open-modal"
+            class="object-cover h-full image-open-modal"
           />
         </div>
       </div>
-      <div id="article-header" class="container lg:flex pt-4 pb-8">
+      <div id="article-header" class="container lg:flex pt-4 pb-4">
         <div>
           <h1 class="text-3xl lg:text-4xl">{{ article.title }}</h1>
-          <div>
+          <div class="mt-4">
             <span
               class="article-reactions"
               :title="`${article.reactions} pessoas reagiram a este post`"
@@ -21,7 +21,9 @@
               <Icon name="heart"></Icon> {{ article.reactions }}
             </span>
             |
-            <span class="artile-minread">
+            <span class="artile-minread" :title="`Aproximadamente ${Math.ceil(
+                  article.content.replace('\n', '').split(' ').length / 240,
+                )} minutos de leitura`">
               <Icon name="book-open"></Icon>
               {{
                 Math.ceil(
@@ -44,9 +46,15 @@
             ></Icon>
           </div>
         </div>
-        <div :class="`mt-8 lg:mt-0 ${
-            (article.url === null || article.url === '' || typeof article.url === 'undefined') && 'hidden'
-          }`">
+
+        <div
+          :class="`mt-8 lg:mt-0 block ${
+            (article.url === null ||
+              article.url === '' ||
+              typeof article.url === 'undefined') &&
+            'hidden'
+          }`"
+        >
           <Button icon="devto" :dev="true" :link="article.url"
             >Acessar artigo</Button
           >
@@ -63,7 +71,11 @@
         <h5>Sugestões</h5>
         <div class="card-grid grid-suggestions">
           <div v-for="(item, index) in suggestions" :key="index">
-            <ArticleCard class="h-full" v-if="index % 2 === 0" :article="item"></ArticleCard>
+            <ArticleCard
+              class="h-full"
+              v-if="index % 2 === 0"
+              :article="item"
+            ></ArticleCard>
             <div
               v-else
               class="flex justify-center flex-col items-center text-gray-light text-center px-4 h-full"
@@ -94,6 +106,9 @@ import ArticleCard from '@/components/Article/ArticleCard'
 export default {
   name: 'slug',
   components: { ArticleCard, Link, Markdown, Button, Icon },
+  data: () => ({
+    callback: {},
+  }),
   async asyncData({ route, $axios, app, store }) {
     // console.log(route.params.slug)
     const article = await (await $axios.get(`articles/${route.params.slug}`))
@@ -107,9 +122,8 @@ export default {
 
     suggestions =
       suggestions.length === 2
-        ? [suggestions[0], ,suggestions[1]]
+        ? [suggestions[0], , suggestions[1]]
         : [suggestions[0], null]
-
 
     return { article, suggestions }
   },
@@ -131,6 +145,9 @@ export default {
   @apply justify-between items-baseline;
   h1 {
     @apply font-bold;
+  }
+  img {
+    max-width: 1000px;
   }
 }
 

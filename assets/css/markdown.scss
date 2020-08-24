@@ -57,7 +57,7 @@ $primary-80: rgba(238, 86, 34, 0.8);
     }
   }
   p {
-    @apply text-base my-2 text-justify break-words;
+    @apply text-base my-2 text-justify break-all;
     &[align="center"]{
       text-align: center !important;
     }

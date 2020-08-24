@@ -10,25 +10,25 @@
           />
         </div>
       </div>
-      <div id="side-header" class="container md:flex pt-4 pb-8">
+      <div id="side-header" class="container lg:flex pt-4 pb-8">
         <div>
-          <h1 class="text-3xl md:text-4xl">{{ side.name }}</h1>
+          <h1 class="text-3xl lg:text-4xl">{{ side.name }}</h1>
         </div>
         <div
-          :class="`mt-8 md:mt-0 ${
+          :class="`mt-8 lg:mt-0 ${
             (side.url === null || side.url === '') && 'hidden'
           }`"
         >
           <Button icon="external-link" :link="side.url">Acessar projeto</Button>
         </div>
       </div>
-      <div class="container flex flex-wrap md:flex-no-wrap gap-4">
+      <div class="container flex flex-wrap lg:flex-no-wrap gap-4">
         <markdown
           id="side-content-readme"
           :content="side.description"
-          class="md:w-8/12"
+          class="lg:w-8/12"
         ></markdown>
-        <div id="side-sidebar" class="md:w-4/12 pt-4">
+        <div id="side-sidebar" class="lg:w-4/12 pt-4">
           <ImageCarousel :images="side.images"></ImageCarousel>
           <hr class="bg-dark my-4" />
           <div

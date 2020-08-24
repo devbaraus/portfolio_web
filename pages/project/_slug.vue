@@ -10,12 +10,12 @@
           />
         </div>
       </div>
-      <div id="project-header" class="container md:flex pt-4 pb-8">
+      <div id="project-header" class="container lg:flex pt-4 pb-8">
         <div>
-          <h1 class="text-3xl md:text-4xl">{{ project.name }}</h1>
+          <h1 class="text-3xl lg:text-4xl">{{ project.name }}</h1>
         </div>
         <div
-          :class="`mt-8 md:mt-0 ${
+          :class="`mt-8 lg:mt-0 ${
             (project.url === null ||
               project.url === '' ||
               typeof project.url === 'undefined') &&
@@ -27,13 +27,13 @@
           >
         </div>
       </div>
-      <div class="container flex flex-wrap md:flex-no-wrap gap-4">
+      <div class="container flex flex-wrap lg:flex-no-wrap gap-4">
         <markdown
           id="project-content-readme"
           :content="project.description"
-          class="md:w-8/12"
+          class="lg:w-8/12"
         ></markdown>
-        <div id="project-projectbar" class="md:w-4/12 pt-4">
+        <div id="project-projectbar" class="lg:w-4/12 pt-4">
           <ImageCarousel :images="project.images"></ImageCarousel>
           <hr class="bg-dark my-4" />
           <div

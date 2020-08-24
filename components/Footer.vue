@@ -1,8 +1,8 @@
 <template>
   <footer id="contact" class="bg-gray-light">
     <!--    <hr class="container">-->
-    <div class="container py-8 flex-wrap md:flex-no-wrap">
-      <div class="footer-links mb-8 md:mb-0">
+    <div class="container py-8 flex-wrap lg:flex-no-wrap">
+      <div class="footer-links mb-8 lg:mb-0">
         <p class="text-2xl font-ubuntu my-2">Entre em contato</p>
         <a
           href="mailto:contato@baraus.dev"

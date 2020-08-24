@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gray-light w-screen pt-24 md:pt-0 md:flex justify-between items-center"
+    class="min-h-screen bg-gray-light w-screen pt-24 lg:pt-0 lg:flex justify-between items-center"
   >
     <div class="container items-center">
       <div class="max-w-3xl mx-auto break-words">
