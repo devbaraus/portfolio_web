@@ -162,7 +162,7 @@
   background-image: none;
 }
 .markdown p {
-  @apply text-base my-2 text-justify break-all;
+  @apply text-base my-2 text-justify break-words;
 }
 .markdown p[align=center] {
   text-align: center !important;
