@@ -1,12 +1,14 @@
 <template>
   <div>
     <img src="/logo.svg" class="hidden" alt="Logo Devbaraus" />
-    <ImageModal></ImageModal>
-    <flash-message></flash-message>
-    <PageScroller/>
+    <ImageModal />
+    <flash-message />
+    <PageScroller />
     <TopBar />
     <div class="pt-12" ref="listener">
-      <Nuxt />
+      <transition name="page">
+        <Nuxt />
+      </transition>
     </div>
     <Footer />
   </div>
@@ -17,9 +19,8 @@ import TopBar from '~/components/NavBar'
 import Footer from '~/components/Footer'
 import ImageModal from '@/components/ImageModal'
 import PageScroller from '@/components/PageScroller'
-import FlashMessage from "@/components/FlashMessage";
+import FlashMessage from '@/components/FlashMessage'
 export default {
-  scrollToTop: true,
   components: {
     FlashMessage,
     PageScroller,
@@ -63,7 +64,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.card-grid{
+.card-grid {
   @apply grid mt-4 col-gap-4 row-gap-8;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }

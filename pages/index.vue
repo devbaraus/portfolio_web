@@ -71,28 +71,21 @@ import ProjectGrid from '~/components/Project/ProjectGrid'
 
 export default {
   components: { ProjectGrid, RepositoryGrid, SkillsGrid, Jumbo, ArticleGrid },
-  async asyncData({ $axios, store }) {
-    store.commit('repos', await (await $axios.get('repos')).data)
+  async asyncData({ $axios }) {
+    let repos
+    let articles
+    let sides
+    let projects
 
-    store.commit('articles', await (await $axios.get('articles')).data)
-    //
-    store.commit('sides', await (await $axios.get('sides')).data)
+    repos = await (await $axios.get('repos')).data
 
-    store.commit('projects', await (await $axios.get('projects')).data)
-  },
-  computed: {
-    repos() {
-      return this.$store.state.repos
-    },
-    articles() {
-      return this.$store.state.articles
-    },
-    projects() {
-      return this.$store.state.projects
-    },
-    sides() {
-      return this.$store.state.sides
-    },
+    articles = await (await $axios.get('articles')).data
+
+    sides = await (await $axios.get('sides')).data
+
+    projects = await (await $axios.get('projects')).data
+
+    return { repos, articles, sides, projects }
   },
 }
 </script>
