@@ -4,9 +4,9 @@
       <div id="side-banner" class="bg-dark h-48">
         <div class="container flex items-center h-full">
           <img
-            :data-src="side.cover"
+            :data-src="side.logo"
             :alt="`${side.name} logotipo`"
-            class="container object-contain h-32"
+            class="container object-contain h-32 lazyload"
           />
         </div>
       </div>

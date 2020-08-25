@@ -14,7 +14,7 @@
           :data-src="image.url"
           :alt="image.name"
           style="width: 100%;"
-          class="image-open-modal lazyload"
+          class="image-open-modal lazyload object-fit h-48"
           @click="
             $store.commit('imageModal', { name: image.name, url: image.url })
           "

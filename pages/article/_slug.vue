@@ -6,7 +6,7 @@
           <img
             :data-src="article.cover"
             alt="Banner artigo"
-            class="object-cover h-full image-open-modal"
+            class="object-cover h-full image-open-modal lazyload"
           />
         </div>
       </div>
