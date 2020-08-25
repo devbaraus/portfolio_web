@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "android": "nuxt generate && cap copy",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --fail-on-error",
     "tailwind": "tailwind build assets/css/tailwind.css -o assets/css/tailwind.core.css",
     "sass": "sass --watch assets/css/tailwind.scss assets/css/tailwind.css"
   },
