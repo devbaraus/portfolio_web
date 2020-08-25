@@ -37,6 +37,9 @@ export default {
     openImageModal() {
       this.$refs['markdown'].querySelectorAll('img').forEach((el) => {
         if (!el.className.includes('emoji')) {
+          const src = el.getAttribute('src')
+          el.removeAttribute('src')
+          el.setAttribute('data-src', src)
           ;[
             'cursor-pointer',
             'hover:opacity-75',
@@ -60,7 +63,7 @@ export default {
   mounted() {
     this.copyClipboard()
     this.openImageModal()
-  }
+  },
 }
 </script>
 
