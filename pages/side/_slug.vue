@@ -4,7 +4,7 @@
       <div id="side-banner" class="bg-dark h-48">
         <div class="container flex items-center h-full">
           <img
-            :src="side.cover"
+            :data-src="side.cover"
             :alt="`${side.name} logotipo`"
             class="container object-contain h-32"
           />

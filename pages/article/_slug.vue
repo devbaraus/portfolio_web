@@ -4,7 +4,7 @@
       <div id="article-banner" class="bg-dark h-64">
         <div class="container-fluid flex items-center justify-center h-full">
           <img
-            :src="article.cover"
+            :data-src="article.cover"
             alt="Banner artigo"
             class="object-cover h-full image-open-modal"
           />

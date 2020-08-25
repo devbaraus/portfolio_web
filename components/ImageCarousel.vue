@@ -11,7 +11,7 @@
       >
         <!--      <div class="numbertext">1 / 3</div>-->
         <img
-          :src="image.url"
+          :data-src="image.url"
           :alt="image.name"
           style="width: 100%;"
           class="image-open-modal lazyload"
