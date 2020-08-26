@@ -171,7 +171,13 @@
   @apply max-w-full mx-auto mb-4 inline;
 }
 .markdown ul {
-  @apply list-disc ml-6;
+  @apply list-none ml-6;
+}
+.markdown ul li::before {
+  content: "⟐";
+  position: relative;
+  left: -1rem;
+  color: var(--color-primary);
 }
 .markdown ol {
   @apply list-decimal ml-6;
@@ -314,6 +320,10 @@
   height: 1rem;
   margin: 0;
   padding: 0;
+}
+
+.transition {
+  @apply transition-all duration-200 ease-in;
 }
 
 /*# sourceMappingURL=tailwind.css.map */

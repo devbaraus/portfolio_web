@@ -3,3 +3,7 @@
 @tailwind utilities;
 @import './highlight';
 @import './markdown';
+
+.transition {
+  @apply transition-all duration-200 ease-in;
+}

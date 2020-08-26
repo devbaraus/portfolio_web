@@ -20,7 +20,7 @@
             >
               <Icon name="heart"></Icon> {{ article.reactions }}
             </span>
-            |
+            <span class="opacity-50 text-primary mx-2">|</span>
             <span class="artile-minread" :title="`Aproximadamente ${Math.ceil(
                   article.content.replace('\n', '').split(' ').length / 240,
                 )} minutos de leitura`">
@@ -32,6 +32,8 @@
               }}
               min</span
             >
+            <span class="opacity-50 text-primary mx-2">|</span>
+            <span>Publicado {{getDate(article.published_at)}}</span>
           </div>
           <div
             v-if="article.tags.length > 0"
@@ -126,6 +128,12 @@ export default {
         : [suggestions[0], null]
 
     return { article, suggestions }
+  },
+  methods: {
+    getDate(rawdate){
+      const date = new Date(String(rawdate))
+      return `${date.getDate()}/${date.getUTCMonth() + 1}/${date.getFullYear()}`
+    }
   },
   mounted() {
     this.$refs.page.querySelectorAll('.image-open-modal').forEach((el) => {

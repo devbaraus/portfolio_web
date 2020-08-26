@@ -10,7 +10,7 @@
             class="languages h-16 flex justify-start items-center"
           >
             <p class="text-xl">{{ repo.stargazers }} <Icon name="star" /></p>
-            <span class="mx-2">|</span>
+            <span class="opacity-50 text-primary mx-2">|</span>
             <Icon
               v-for="lang in repo.languages"
               :key="lang"
