@@ -6,14 +6,13 @@
       <div class="container items-center">
         <div class="max-w-3xl mx-auto break-words">
           <div class="pb-24">
-            <h2 class="font-ubuntu text-5xl tracking-tight">
+            <h4 class="font-bold text-xl tracking-tight">
               Olá, tudo bem?!
+            </h4>
+            <h2 class="font-ubuntu text-5xl my-2">
+              Sou
+              <span class="text-primary">Bruno de Araújo Alves</span>
             </h2>
-            <h3 class="font-bold font-poppins text-xl my-2">
-              Meu chamo
-              <span class="text-primary">Bruno de Araújo Alves</span> e este é
-              meu portfólio.
-            </h3>
             <h4 class="text-base text-justify">
               Tenho {{ new Date().getFullYear() - 1999 }} anos, estudante de
               <span class="text-primary">Ciência da Computação</span> e procuro sempre aprender algo novo.
