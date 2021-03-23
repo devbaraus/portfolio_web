@@ -2,6 +2,8 @@
 <img src="https://raw.githubusercontent.com/devbaraus/portfolio_web/master/static/logo.svg" alt="" width="128" style="margin: 0 auto;">
 </p>
 
+Hello world
+
 <p align="center">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/devbaraus/portfolio_web?color=#8257E5">
     <a href="https://app.netlify.com/sites/devbaraus/deploys">
